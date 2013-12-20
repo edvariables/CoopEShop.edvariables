@@ -5320,7 +5320,7 @@ null;]]></Script>
                             </VAR>
                             <!--.EDV.CoopEShop.DB.EMailAuto.Robot.EMail.LastTime-->
                             <VAR ShortName="LastTime" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="DateTime">
-                                <Value><![CDATA[17/12/2013 07:08:24]]></Value>
+                                <Value><![CDATA[20/12/2013 09:01:54]]></Value>
                             </VAR>
                             <!--.EDV.CoopEShop.DB.EMailAuto.Robot.EMail.Message-->
                             <VAR ShortName="Message" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Text">
@@ -5384,7 +5384,7 @@ null;]]></Script>
                         </VAR>
                         <!--.EDV.CoopEShop.DB.EMailAuto.Robot.LastTime-->
                         <VAR ShortName="LastTime" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="DateTime">
-                            <Value><![CDATA[19/12/2013 09:41:05]]></Value>
+                            <Value><![CDATA[20/12/2013 09:46:54]]></Value>
                         </VAR>
                         <!--.EDV.CoopEShop.DB.EMailAuto.Robot.Now-->
                         <VAR ShortName="Now" ClassName="" AutoReset="1" Securized="0" ReadOnly="0" ValueType="Boolean">
@@ -9541,6 +9541,15 @@ else "";
                     <VAR ShortName="DBUser" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" SaveLocation="X">
                         <Value><![CDATA[coopeshop]]></Value>
                     </VAR>
+                    <!--.EDV.CoopEShop.edvAppli.DataSource.OnChanging-->
+                    <VAR ShortName="OnChanging" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Null">
+                        <Script><![CDATA[when(..:Changing
+&& edv.Coopeshop) {
+	edv.Coopeshop.dataSource = ..;
+}
+null;
+]]></Script>
+                    </VAR>
                 </VAR>
                 <!--.EDV.CoopEShop.edvAppli.DBBackup-->
                 <VAR ShortName="DBBackup" ClassName="VarVisual" AutoReset="1" Securized="0" ReadOnly="0" ValueType="Visual">
@@ -10613,7 +10622,7 @@ null;]]></Script>
                     <Script><![CDATA[:Major + "." + :Minor + "." + :Revision + "." + :Build]]></Script>
                     <!--.EDV.CoopEShop.edvAppli.Version.Build-->
                     <VAR ShortName="Build" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer">
-                        <Value><![CDATA[36]]></Value>
+                        <Value><![CDATA[38]]></Value>
                         <!--.EDV.CoopEShop.edvAppli.Version.Build.OnChecking-->
                         <VAR ShortName="OnChecking" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Null">
                             <Script><![CDATA[when(..Save:Checking)
@@ -13697,7 +13706,7 @@ edvTools.Dialog = function(varName, params, options, className){
                 <VAR ShortName="Inner" ClassName="VarLink" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Link">
                     <!--.EDV.CoopEShop.Visual.Inner.@-->
                     <VAR ShortName="@" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="VariableName">
-                        <Value><![CDATA[.EDV.CoopEShop.Docs.PCEA]]></Value>
+                        <Value><![CDATA[.EDV.CoopEShop.DB.Commande.Html.Edit]]></Value>
                         <!--.EDV.CoopEShop.Visual.Inner.@.Exists-->
                         <VAR ShortName="Exists" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Boolean">
                             <Script><![CDATA[if (edvClient!=null) edvClient.VariableExists(..);]]></Script>
