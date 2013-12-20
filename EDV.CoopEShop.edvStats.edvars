@@ -1,0 +1,778 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EDV>
+    <Version Major="1" Minor="0" Build="0" Revision="104">1.0.0.104</Version>
+    <DOM ShortName="Coopeshop">
+        <!--.Coopeshop.edvStats-->
+        <VAR ShortName="edvStats" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Domain">
+            <!--.Coopeshop.edvStats.Coopeshop-->
+            <VAR ShortName="Coopeshop" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Domain">
+                <!--.Coopeshop.edvStats.Coopeshop.Article-->
+                <VAR ShortName="Article" ClassName="VarDataTable" AutoReset="0" Securized="0" ReadOnly="0" ValueType="DataTable">
+                    <Value><![CDATA[<?xml version="1.0" encoding="utf-16"?><DataTable><Schema><xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"><xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="MySQL" msdata:UseCurrentLocale="true"><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element name="MySQL"><xs:complexType><xs:sequence><xs:element name="IdArticle" type="xs:int" minOccurs="0" /><xs:element name="Name" type="xs:string" minOccurs="0" /><xs:element name="CategorieArticle" type="xs:string" minOccurs="0" /><xs:element name="NameF" type="xs:string" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema></Schema><Data /></DataTable>]]></Value>
+                    <DOM ShortName="edvExpander">
+                        <!--.Coopeshop.edvStats.Coopeshop.Article.edvExpander.Destination-->
+                        <VAR ShortName="Destination" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" />
+                    </DOM>
+                    <!--.Coopeshop.edvStats.Coopeshop.Article.Error-->
+                    <VAR ShortName="Error" ClassName="VarLog" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" SaveLocation="V" Control="EDVCtrlLog" />
+                    <!--.Coopeshop.edvStats.Coopeshop.Article.Open-->
+                    <VAR ShortName="Open" ClassName="" AutoReset="1" Securized="0" ReadOnly="0" ValueType="Boolean" />
+                    <!--.Coopeshop.edvStats.Coopeshop.Article.RowsCount-->
+                    <VAR ShortName="RowsCount" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer">
+                        <Value><![CDATA[30]]></Value>
+                        <!--.Coopeshop.edvStats.Coopeshop.Article.RowsCount.Limit-->
+                        <VAR ShortName="Limit" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Integer">
+                            <Value><![CDATA[30]]></Value>
+                        </VAR>
+                    </VAR>
+                    <!--.Coopeshop.edvStats.Coopeshop.Article.Source-->
+                    <VAR ShortName="Source" ClassName="VarDataSource" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Text">
+                        <Script><![CDATA["Provider=MSDASQL;DRIVER={MySQL ODBC 5.1 Driver};SERVER=" + :DBServer + ";PORT=3306;DATABASE=" + :DBName + "; OPTION=19035;UID=" + :DBUser + ";PWD=" + :DBPassword;]]></Script>
+                        <!--.Coopeshop.edvStats.Coopeshop.Article.Source.DBName-->
+                        <VAR ShortName="DBName" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                            <Value><![CDATA[coopeshop]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Article.Source.DBPassword-->
+                        <VAR ShortName="DBPassword" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Password" />
+                        <!--.Coopeshop.edvStats.Coopeshop.Article.Source.DBServer-->
+                        <VAR ShortName="DBServer" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                            <Value><![CDATA[localhost]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Article.Source.DBType-->
+                        <VAR ShortName="DBType" ClassName="VarSelection" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Selection">
+                            <Value><![CDATA[MySQL]]></Value>
+                            <!--.Coopeshop.edvStats.Coopeshop.Article.Source.DBType.InsertAuto-->
+                            <VAR ShortName="InsertAuto" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                <Value><![CDATA[False]]></Value>
+                            </VAR>
+                            <!--.Coopeshop.edvStats.Coopeshop.Article.Source.DBType.InValues-->
+                            <VAR ShortName="InValues" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                <Value><![CDATA[True]]></Value>
+                            </VAR>
+                            <!--.Coopeshop.edvStats.Coopeshop.Article.Source.DBType.Values-->
+                            <VAR ShortName="Values" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Text">
+                                <Value><![CDATA[Internal
+EDV
+XML
+Oracle
+SQLServer
+Access
+TextFile
+MySQL
+Excel
+FileSystem
+FTP
+EDVars
+EDVServer]]></Value>
+                            </VAR>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Article.Source.DBUser-->
+                        <VAR ShortName="DBUser" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                            <Value><![CDATA[root]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Article.Source.Id-->
+                        <VAR ShortName="Id" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="VariableName">
+                            <Value><![CDATA[_Script]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Article.Source._Script-->
+                        <VAR ShortName="_Script" ClassName="" AutoReset="0" Securized="1" ReadOnly="1" ValueType="Code">
+                            <Value><![CDATA["Provider=MSDASQL;DRIVER={MySQL ODBC 5.1 Driver};SERVER=" + :DBServer + ";PORT=3306;DATABASE=" + :DBName + "; OPTION=19035;UID=" + :DBUser + ";PWD=" + :DBPassword;]]></Value>
+                        </VAR>
+                    </VAR>
+                    <!--.Coopeshop.edvStats.Coopeshop.Article.SQLSelect-->
+                    <VAR ShortName="SQLSelect" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                        <Value><![CDATA[SELECT A.IdArticle, A.Name, PCAT.Label AS CategorieArticle, F.Name AS NameF
+FROM article A
+INNER JOIN parameter PCAT
+    ON A.Category = PCAT.IdParam
+    AND PCAT.Domain = 'ARTCAT'
+INNER JOIN fournisseur F
+    ON A.IdFournisseur = F.IdFournisseur
+WHERE 1=1
+<?if(:CATEGORY != "") {?>AND A.Category = :CATEGORY<?}?>
+<?if(:IDF != "") {?>AND A.IdFournisseur = :IDF<?}?>]]></Value>
+                        <!--.Coopeshop.edvStats.Coopeshop.Article.SQLSelect.CATEGORY-->
+                        <VAR ShortName="CATEGORY" ClassName="VarSelection" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Selection">
+                            <!--.Coopeshop.edvStats.Coopeshop.Article.SQLSelect.CATEGORY.DesignOnly-->
+                            <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                <Value><![CDATA[False]]></Value>
+                            </VAR>
+                            <!--.Coopeshop.edvStats.Coopeshop.Article.SQLSelect.CATEGORY.Text-->
+                            <VAR ShortName="Text" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                                <Value><![CDATA[Catégories]]></Value>
+                            </VAR>
+                            <!--.Coopeshop.edvStats.Coopeshop.Article.SQLSelect.CATEGORY.Values-->
+                            <VAR ShortName="Values" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                <Value><![CDATA[<?="\t"?>(tous)
+<?var sql = "SELECT IdParam, Label FROM parameter WHERE Domain = 'ARTCAT'";
+var dataTable = edv.Data.Open(sql, ..Source);
+for(var r in dataTable.Rows)
+    echo(r["IdParam"] + "\t" + r["Label"], true);
+?>]]></Value>
+                            </VAR>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Article.SQLSelect.IDF-->
+                        <VAR ShortName="IDF" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                            <Value><![CDATA[5]]></Value>
+                        </VAR>
+                    </VAR>
+                    <!--.Coopeshop.edvStats.Coopeshop.Article.Status-->
+                    <VAR ShortName="Status" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer" SaveLocation="V" />
+                    <!--.Coopeshop.edvStats.Coopeshop.Article.Text-->
+                    <VAR ShortName="Text" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                        <Value><![CDATA[Article]]></Value>
+                    </VAR>
+                    <!--.Coopeshop.edvStats.Coopeshop.Article.Visible-->
+                    <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                        <Value><![CDATA[True]]></Value>
+                        <!--.Coopeshop.edvStats.Coopeshop.Article.Visible.DesignOnly-->
+                        <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                            <Value><![CDATA[True]]></Value>
+                        </VAR>
+                    </VAR>
+                </VAR>
+                <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs-->
+                <VAR ShortName="Fournisseurs" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Domain">
+                    <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles-->
+                    <VAR ShortName="Articles" ClassName="VarDataTable" AutoReset="0" Securized="0" ReadOnly="0" ValueType="DataTable">
+                        <Value><![CDATA[<?xml version="1.0" encoding="utf-16"?><DataTable><Schema><xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"><xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="MySQL" msdata:UseCurrentLocale="true"><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element name="MySQL"><xs:complexType><xs:sequence><xs:element name="Line" type="xs:int" minOccurs="0" /><xs:element name="Price" type="xs:decimal" minOccurs="0" /><xs:element name="Unit" type="xs:string" minOccurs="0" /><xs:element name="NameA" type="xs:string" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema></Schema><Data /></DataTable>]]></Value>
+                        <DOM ShortName="edvExpander">
+                            <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles.edvExpander.Destination-->
+                            <VAR ShortName="Destination" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" />
+                        </DOM>
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles.Error-->
+                        <VAR ShortName="Error" ClassName="VarLog" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" SaveLocation="V" Control="EDVCtrlLog" />
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles.Open-->
+                        <VAR ShortName="Open" ClassName="" AutoReset="1" Securized="0" ReadOnly="0" ValueType="Boolean" />
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles.RowsCount-->
+                        <VAR ShortName="RowsCount" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer">
+                            <Value><![CDATA[57]]></Value>
+                            <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles.RowsCount.Limit-->
+                            <VAR ShortName="Limit" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Integer">
+                                <Value><![CDATA[1000]]></Value>
+                            </VAR>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles.SQLSelect-->
+                        <VAR ShortName="SQLSelect" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                            <Value><![CDATA[SELECT LG.Line, LG.Price, LG.Unit, A.Name AS NameA
+FROM lgdossier LG
+INNER JOIN article A
+    ON A.IdArticle = LG.IdArticle
+WHERE LG.TypeDossier = 'CTLOG'
+AND LG.IdContact = :IDCF
+AND LG.IdDossier = :IDCATALOGUE
+ORDER BY A.Name]]></Value>
+                            <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles.SQLSelect.IDCATALOGUE-->
+                            <VAR ShortName="IDCATALOGUE" ClassName="VarSelection" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Selection">
+                                <Value><![CDATA[111102001]]></Value>
+                                <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles.SQLSelect.IDCATALOGUE.DesignOnly-->
+                                <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                    <Value><![CDATA[False]]></Value>
+                                </VAR>
+                                <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles.SQLSelect.IDCATALOGUE.Text-->
+                                <VAR ShortName="Text" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                                    <Value><![CDATA[Catalogue]]></Value>
+                                </VAR>
+                                <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles.SQLSelect.IDCATALOGUE.Values-->
+                                <VAR ShortName="Values" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                    <Value><![CDATA[<?="\t"?>(tous)
+<?var sql = "SELECT IdDossier, Name"
+   + " FROM dossier D"
+   + " WHERE IdContact = ?"
+   + " AND TypeDossier = 'CTLOG'";
+var dataTable = edv.Data.Open(sql, ..Source, [..IDCF]);
+for(var r in dataTable.Rows)
+    echo(r[0] + "\t" + r[1], true);
+?>]]></Value>
+                                </VAR>
+                            </VAR>
+                            <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles.SQLSelect.IDCF-->
+                            <VAR ShortName="IDCF" ClassName="VarSelection" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Selection">
+                                <Value><![CDATA[42]]></Value>
+                                <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles.SQLSelect.IDCF.DesignOnly-->
+                                <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                    <Value><![CDATA[False]]></Value>
+                                </VAR>
+                                <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles.SQLSelect.IDCF.Text-->
+                                <VAR ShortName="Text" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                                    <Value><![CDATA[Fournisseur]]></Value>
+                                </VAR>
+                                <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles.SQLSelect.IDCF.Values-->
+                                <VAR ShortName="Values" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                    <Value><![CDATA[<?="\t"?>(tous)
+<?var sql = "SELECT C.IdContact, F.Name"
+   + " FROM fournisseur F"
+   + " INNER JOIN contact C"
+   + "    ON F.IdContact = C.IdContact";
+var dataTable = edv.Data.Open(sql, ..Source);
+for(var r in dataTable.Rows)
+    echo(r["IdContact"] + "\t" + r["Name"], true);
+?>]]></Value>
+                                </VAR>
+                            </VAR>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles.Status-->
+                        <VAR ShortName="Status" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer" SaveLocation="V" />
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles.Text-->
+                        <VAR ShortName="Text" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                            <Value><![CDATA[Articles]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles.Visible-->
+                        <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                            <Value><![CDATA[True]]></Value>
+                            <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Articles.Visible.DesignOnly-->
+                            <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                <Value><![CDATA[True]]></Value>
+                            </VAR>
+                        </VAR>
+                    </VAR>
+                    <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Catalogue-->
+                    <VAR ShortName="Catalogue" ClassName="VarDataTable" AutoReset="0" Securized="0" ReadOnly="0" ValueType="DataTable">
+                        <Value><![CDATA[<?xml version="1.0" encoding="utf-16"?><DataTable><Schema><xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"><xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="MySQL" msdata:UseCurrentLocale="true"><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element name="MySQL"><xs:complexType><xs:sequence><xs:element name="IdContact" type="xs:int" minOccurs="0" /><xs:element name="IdDossier" type="xs:int" minOccurs="0" /><xs:element name="TypeDossier" type="xs:string" minOccurs="0" /><xs:element name="DateDossier" type="xs:dateTime" minOccurs="0" /><xs:element name="Name" type="xs:string" minOccurs="0" /><xs:element name="IdClient" type="xs:int" minOccurs="0" /><xs:element name="ClosedDate" type="xs:dateTime" minOccurs="0" /><xs:element name="Status" type="xs:string" minOccurs="0" /><xs:element name="IdDossierRef" type="xs:int" minOccurs="0" /><xs:element name="TypeDossierRef" type="xs:string" minOccurs="0" /><xs:element name="Comment" type="xs:string" minOccurs="0" /><xs:element name="IdUser" type="xs:int" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema></Schema><Data /></DataTable>]]></Value>
+                        <DOM ShortName="edvExpander">
+                            <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Catalogue.edvExpander.Destination-->
+                            <VAR ShortName="Destination" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" />
+                        </DOM>
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Catalogue.Error-->
+                        <VAR ShortName="Error" ClassName="VarLog" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" SaveLocation="V" Control="EDVCtrlLog" />
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Catalogue.Open-->
+                        <VAR ShortName="Open" ClassName="" AutoReset="1" Securized="0" ReadOnly="0" ValueType="Boolean" />
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Catalogue.RowsCount-->
+                        <VAR ShortName="RowsCount" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer">
+                            <Value><![CDATA[3]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Catalogue.SQLSelect-->
+                        <VAR ShortName="SQLSelect" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                            <Value><![CDATA[SELECT *
+FROM dossier
+WHERE TypeDossier = 'CTLOG'
+AND IdContact = :IDCF]]></Value>
+                            <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Catalogue.SQLSelect.IDCF-->
+                            <VAR ShortName="IDCF" ClassName="VarSelection" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Selection">
+                                <Value><![CDATA[43]]></Value>
+                                <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Catalogue.SQLSelect.IDCF.DesignOnly-->
+                                <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                    <Value><![CDATA[False]]></Value>
+                                </VAR>
+                                <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Catalogue.SQLSelect.IDCF.Text-->
+                                <VAR ShortName="Text" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                                    <Value><![CDATA[Fournisseur]]></Value>
+                                </VAR>
+                                <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Catalogue.SQLSelect.IDCF.Values-->
+                                <VAR ShortName="Values" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                    <Value><![CDATA[<?="\t"?>(tous)
+<?var sql = "SELECT C.IdContact, F.Name"
+   + " FROM fournisseur F"
+   + " INNER JOIN contact C"
+   + "    ON F.IdContact = C.IdContact";
+var dataTable = edv.Data.Open(sql, ..Source);
+for(var r in dataTable.Rows)
+    echo(r["IdContact"] + "\t" + r["Name"], true);
+?>]]></Value>
+                                </VAR>
+                            </VAR>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Catalogue.Status-->
+                        <VAR ShortName="Status" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer" SaveLocation="V" />
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Catalogue.Text-->
+                        <VAR ShortName="Text" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                            <Value><![CDATA[Catalogue]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Catalogue.Visible-->
+                        <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                            <Value><![CDATA[True]]></Value>
+                            <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Catalogue.Visible.DesignOnly-->
+                            <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                <Value><![CDATA[True]]></Value>
+                            </VAR>
+                        </VAR>
+                    </VAR>
+                    <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Fournisseur-->
+                    <VAR ShortName="Fournisseur" ClassName="VarDataTable" AutoReset="0" Securized="0" ReadOnly="0" ValueType="DataTable">
+                        <Value><![CDATA[<?xml version="1.0" encoding="utf-16"?><DataTable><Schema><xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"><xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="MySQL" msdata:UseCurrentLocale="true"><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element name="MySQL"><xs:complexType><xs:sequence><xs:element name="IdFournisseur" type="xs:int" minOccurs="0" /><xs:element name="IdContact" type="xs:int" minOccurs="0" /><xs:element name="Name" type="xs:string" minOccurs="0" /><xs:element name="NumCompte" type="xs:int" minOccurs="0" /><xs:element name="Enabled" type="xs:short" minOccurs="0" /><xs:element name="Message" type="xs:string" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema></Schema><Data /></DataTable>]]></Value>
+                        <DOM ShortName="edvExpander">
+                            <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Fournisseur.edvExpander.Destination-->
+                            <VAR ShortName="Destination" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" />
+                        </DOM>
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Fournisseur.Error-->
+                        <VAR ShortName="Error" ClassName="VarLog" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" SaveLocation="V" Control="EDVCtrlLog" />
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Fournisseur.Open-->
+                        <VAR ShortName="Open" ClassName="" AutoReset="1" Securized="0" ReadOnly="0" ValueType="Boolean" />
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Fournisseur.RowsCount-->
+                        <VAR ShortName="RowsCount" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer">
+                            <Value><![CDATA[5]]></Value>
+                            <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Fournisseur.RowsCount.Limit-->
+                            <VAR ShortName="Limit" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Integer">
+                                <Value><![CDATA[10]]></Value>
+                            </VAR>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Fournisseur.SQLSelect-->
+                        <VAR ShortName="SQLSelect" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                            <Value><![CDATA[SELECT *
+FROM fournisseur]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Fournisseur.Status-->
+                        <VAR ShortName="Status" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer" SaveLocation="V" />
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Fournisseur.Text-->
+                        <VAR ShortName="Text" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                            <Value><![CDATA[Fournisseur]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Fournisseur.Visible-->
+                        <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                            <Value><![CDATA[True]]></Value>
+                            <!--.Coopeshop.edvStats.Coopeshop.Fournisseurs.Fournisseur.Visible.DesignOnly-->
+                            <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                <Value><![CDATA[True]]></Value>
+                            </VAR>
+                        </VAR>
+                    </VAR>
+                </VAR>
+                <!--.Coopeshop.edvStats.Coopeshop.Params-->
+                <VAR ShortName="Params" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Domain">
+                    <Value><![CDATA[Paramètres]]></Value>
+                    <!--.Coopeshop.edvStats.Coopeshop.Params.Domain-->
+                    <VAR ShortName="Domain" ClassName="VarDataTable" AutoReset="0" Securized="0" ReadOnly="0" ValueType="DataTable">
+                        <Value><![CDATA[<?xml version="1.0" encoding="utf-16"?><DataTable><Schema><xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"><xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="MySQL" msdata:UseCurrentLocale="true"><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element name="MySQL"><xs:complexType><xs:sequence><xs:element name="Domain" type="xs:string" minOccurs="0" /><xs:element name="IdParam" type="xs:string" minOccurs="0" /><xs:element name="Label" type="xs:string" minOccurs="0" /><xs:element name="Value" type="xs:string" minOccurs="0" /><xs:element name="ValueType" type="xs:string" minOccurs="0" /><xs:element name="Data" type="xs:string" minOccurs="0" /><xs:element name="SortIndex" type="xs:int" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema></Schema><Data /></DataTable>]]></Value>
+                        <DOM ShortName="edvExpander">
+                            <!--.Coopeshop.edvStats.Coopeshop.Params.Domain.edvExpander.Destination-->
+                            <VAR ShortName="Destination" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" />
+                        </DOM>
+                        <!--.Coopeshop.edvStats.Coopeshop.Params.Domain.Error-->
+                        <VAR ShortName="Error" ClassName="VarLog" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" SaveLocation="V" Control="EDVCtrlLog" />
+                        <!--.Coopeshop.edvStats.Coopeshop.Params.Domain.Open-->
+                        <VAR ShortName="Open" ClassName="" AutoReset="1" Securized="0" ReadOnly="0" ValueType="Boolean" />
+                        <!--.Coopeshop.edvStats.Coopeshop.Params.Domain.RowsCount-->
+                        <VAR ShortName="RowsCount" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer">
+                            <Value><![CDATA[9]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Params.Domain.SQLSelect-->
+                        <VAR ShortName="SQLSelect" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                            <Value><![CDATA[SELECT *
+FROM parameter
+WHERE Domain = '.']]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Params.Domain.Status-->
+                        <VAR ShortName="Status" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer" SaveLocation="V" />
+                        <!--.Coopeshop.edvStats.Coopeshop.Params.Domain.Text-->
+                        <VAR ShortName="Text" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                            <Value><![CDATA[Domaines]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Params.Domain.Visible-->
+                        <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                            <Value><![CDATA[True]]></Value>
+                            <!--.Coopeshop.edvStats.Coopeshop.Params.Domain.Visible.DesignOnly-->
+                            <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                <Value><![CDATA[True]]></Value>
+                            </VAR>
+                        </VAR>
+                    </VAR>
+                    <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter-->
+                    <VAR ShortName="Parameter" ClassName="VarDataTable" AutoReset="0" Securized="0" ReadOnly="0" ValueType="DataTable">
+                        <Value><![CDATA[<?xml version="1.0" encoding="utf-16"?><DataTable><Schema><xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"><xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="MySQL" msdata:UseCurrentLocale="true"><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element name="MySQL"><xs:complexType><xs:sequence><xs:element name="Domain" type="xs:string" minOccurs="0" /><xs:element name="IdParam" type="xs:string" minOccurs="0" /><xs:element name="Label" type="xs:string" minOccurs="0" /><xs:element name="Value" type="xs:string" minOccurs="0" /><xs:element name="ValueType" type="xs:string" minOccurs="0" /><xs:element name="Data" type="xs:string" minOccurs="0" /><xs:element name="SortIndex" type="xs:int" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema></Schema><Data /></DataTable>]]></Value>
+                        <DOM ShortName="edvExpander">
+                            <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.edvExpander.Destination-->
+                            <VAR ShortName="Destination" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" />
+                        </DOM>
+                        <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.Error-->
+                        <VAR ShortName="Error" ClassName="VarLog" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" SaveLocation="V" Control="EDVCtrlLog" />
+                        <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.Open-->
+                        <VAR ShortName="Open" ClassName="" AutoReset="1" Securized="0" ReadOnly="0" ValueType="Boolean" />
+                        <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.RowsCount-->
+                        <VAR ShortName="RowsCount" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer">
+                            <Value><![CDATA[4]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.Source-->
+                        <VAR ShortName="Source" ClassName="VarDataSource" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Text">
+                            <Script><![CDATA["Provider=MSDASQL;DRIVER={MySQL ODBC 5.1 Driver};SERVER=" + :DBServer + ";PORT=3306;DATABASE=" + :DBName + "; OPTION=19035;UID=" + :DBUser + ";PWD=" + :DBPassword;]]></Script>
+                            <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.Source.DBName-->
+                            <VAR ShortName="DBName" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                                <Value><![CDATA[coopeshop]]></Value>
+                            </VAR>
+                            <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.Source.DBPassword-->
+                            <VAR ShortName="DBPassword" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Password" />
+                            <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.Source.DBServer-->
+                            <VAR ShortName="DBServer" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                                <Value><![CDATA[localhost]]></Value>
+                            </VAR>
+                            <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.Source.DBType-->
+                            <VAR ShortName="DBType" ClassName="VarSelection" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Selection">
+                                <Value><![CDATA[MySQL]]></Value>
+                                <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.Source.DBType.InsertAuto-->
+                                <VAR ShortName="InsertAuto" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                    <Value><![CDATA[False]]></Value>
+                                </VAR>
+                                <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.Source.DBType.InValues-->
+                                <VAR ShortName="InValues" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                    <Value><![CDATA[True]]></Value>
+                                </VAR>
+                                <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.Source.DBType.Values-->
+                                <VAR ShortName="Values" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Text">
+                                    <Value><![CDATA[Internal
+EDV
+XML
+Oracle
+SQLServer
+Access
+TextFile
+MySQL
+Excel
+FileSystem
+FTP
+EDVars
+EDVServer]]></Value>
+                                </VAR>
+                            </VAR>
+                            <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.Source.DBUser-->
+                            <VAR ShortName="DBUser" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                                <Value><![CDATA[root]]></Value>
+                            </VAR>
+                            <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.Source.Id-->
+                            <VAR ShortName="Id" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="VariableName">
+                                <Value><![CDATA[_Script]]></Value>
+                            </VAR>
+                            <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.Source._Script-->
+                            <VAR ShortName="_Script" ClassName="" AutoReset="0" Securized="1" ReadOnly="1" ValueType="Code">
+                                <Value><![CDATA["Provider=MSDASQL;DRIVER={MySQL ODBC 5.1 Driver};SERVER=" + :DBServer + ";PORT=3306;DATABASE=" + :DBName + "; OPTION=19035;UID=" + :DBUser + ";PWD=" + :DBPassword;]]></Value>
+                            </VAR>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.SQLSelect-->
+                        <VAR ShortName="SQLSelect" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                            <Value><![CDATA[SELECT *
+FROM parameter
+WHERE Domain = :DOMAIN]]></Value>
+                            <Meta><![CDATA[<DESIGNER.LASTPRESENTATION>Window</DESIGNER.LASTPRESENTATION>]]></Meta>
+                            <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.SQLSelect.DOMAIN-->
+                            <VAR ShortName="DOMAIN" ClassName="VarSelection" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Selection">
+                                <Value><![CDATA[CMDSTA]]></Value>
+                                <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.SQLSelect.DOMAIN.DesignOnly-->
+                                <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                    <Value><![CDATA[False]]></Value>
+                                </VAR>
+                                <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.SQLSelect.DOMAIN.Text-->
+                                <VAR ShortName="Text" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                                    <Value><![CDATA[Domaine]]></Value>
+                                </VAR>
+                                <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.SQLSelect.DOMAIN.Values-->
+                                <VAR ShortName="Values" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                    <Value><![CDATA[<?for(var r in ...Domain:Rows)
+    echo(r["IdParam"] + "\t" + r["Label"], true);
+?>]]></Value>
+                                </VAR>
+                            </VAR>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.Status-->
+                        <VAR ShortName="Status" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer" SaveLocation="V" />
+                        <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.Text-->
+                        <VAR ShortName="Text" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                            <Value><![CDATA[Liste]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.Visible-->
+                        <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                            <Value><![CDATA[True]]></Value>
+                            <!--.Coopeshop.edvStats.Coopeshop.Params.Parameter.Visible.DesignOnly-->
+                            <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                <Value><![CDATA[True]]></Value>
+                            </VAR>
+                        </VAR>
+                    </VAR>
+                    <DOM ShortName="Visible">
+                        <!--.Coopeshop.edvStats.Coopeshop.Params.Visible.DesignOnly-->
+                        <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                            <Value><![CDATA[False]]></Value>
+                        </VAR>
+                    </DOM>
+                </VAR>
+                <!--.Coopeshop.edvStats.Coopeshop.Source-->
+                <VAR ShortName="Source" ClassName="VarDataSource" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Text">
+                    <Script><![CDATA["Provider=MSDASQL;DRIVER={MySQL ODBC 5.1 Driver};SERVER=" + :DBServer + ";PORT=3306;DATABASE=" + :DBName + "; OPTION=19035;UID=" + :DBUser + ";PWD=" + :DBPassword;]]></Script>
+                    <!--.Coopeshop.edvStats.Coopeshop.Source.DBName-->
+                    <VAR ShortName="DBName" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                        <Value><![CDATA[coopeshop]]></Value>
+                    </VAR>
+                    <!--.Coopeshop.edvStats.Coopeshop.Source.DBPassword-->
+                    <VAR ShortName="DBPassword" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Password" />
+                    <!--.Coopeshop.edvStats.Coopeshop.Source.DBServer-->
+                    <VAR ShortName="DBServer" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                        <Value><![CDATA[localhost]]></Value>
+                    </VAR>
+                    <!--.Coopeshop.edvStats.Coopeshop.Source.DBType-->
+                    <VAR ShortName="DBType" ClassName="VarSelection" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Selection">
+                        <Value><![CDATA[MySQL]]></Value>
+                        <!--.Coopeshop.edvStats.Coopeshop.Source.DBType.InsertAuto-->
+                        <VAR ShortName="InsertAuto" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                            <Value><![CDATA[False]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Source.DBType.InValues-->
+                        <VAR ShortName="InValues" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                            <Value><![CDATA[True]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.Source.DBType.Values-->
+                        <VAR ShortName="Values" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Text">
+                            <Value><![CDATA[Internal
+EDV
+XML
+Oracle
+SQLServer
+Access
+TextFile
+MySQL
+Excel
+FileSystem
+FTP
+EDVars
+EDVServer]]></Value>
+                        </VAR>
+                    </VAR>
+                    <!--.Coopeshop.edvStats.Coopeshop.Source.DBUser-->
+                    <VAR ShortName="DBUser" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                        <Value><![CDATA[root]]></Value>
+                    </VAR>
+                    <!--.Coopeshop.edvStats.Coopeshop.Source.Id-->
+                    <VAR ShortName="Id" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="VariableName">
+                        <Value><![CDATA[_Script]]></Value>
+                    </VAR>
+                    <!--.Coopeshop.edvStats.Coopeshop.Source._Script-->
+                    <VAR ShortName="_Script" ClassName="" AutoReset="0" Securized="1" ReadOnly="1" ValueType="Code">
+                        <Value><![CDATA["Provider=MSDASQL;DRIVER={MySQL ODBC 5.1 Driver};SERVER=" + :DBServer + ";PORT=3306;DATABASE=" + :DBName + "; OPTION=19035;UID=" + :DBUser + ";PWD=" + :DBPassword;]]></Value>
+                    </VAR>
+                </VAR>
+                <!--.Coopeshop.edvStats.Coopeshop.User-->
+                <VAR ShortName="User" ClassName="VarDataTable" AutoReset="0" Securized="0" ReadOnly="0" ValueType="DataTable">
+                    <Value><![CDATA[<?xml version="1.0" encoding="utf-16"?><DataTable><Schema><xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"><xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="MySQL" msdata:UseCurrentLocale="true"><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element name="MySQL"><xs:complexType><xs:sequence><xs:element name="IdUser" type="xs:int" minOccurs="0" /><xs:element name="Name" type="xs:string" minOccurs="0" /><xs:element name="Enabled" type="xs:short" minOccurs="0" /><xs:element name="IdContact" type="xs:int" minOccurs="0" /><xs:element name="IdContactRef" type="xs:int" minOccurs="0" /><xs:element name="ContactType" type="xs:string" minOccurs="0" /><xs:element name="Name1" type="xs:string" minOccurs="0" /><xs:element name="EMail" type="xs:string" minOccurs="0" /><xs:element name="Phone1" type="xs:string" minOccurs="0" /><xs:element name="Phone2" type="xs:string" minOccurs="0" /><xs:element name="Address" type="xs:string" minOccurs="0" /><xs:element name="ZipCode" type="xs:string" minOccurs="0" /><xs:element name="City" type="xs:string" minOccurs="0" /><xs:element name="Enabled1" type="xs:short" minOccurs="0" /><xs:element name="PIPO" type="xs:string" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema></Schema><Data /></DataTable>]]></Value>
+                    <!--.Coopeshop.edvStats.Coopeshop.User.edvDocument-->
+                    <VAR ShortName="edvDocument" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                        <Value><![CDATA[<h3>TITRE</h3>
+<?=edv.{Library}.HTML.edvStat(edvSender)?>]]></Value>
+                    </VAR>
+                    <DOM ShortName="edvExpander">
+                        <!--.Coopeshop.edvStats.Coopeshop.User.edvExpander.Destination-->
+                        <VAR ShortName="Destination" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" />
+                    </DOM>
+                    <!--.Coopeshop.edvStats.Coopeshop.User.edvStat-->
+                    <VAR ShortName="edvStat" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Object" SaveLocation="V" />
+                    <!--.Coopeshop.edvStats.Coopeshop.User.Error-->
+                    <VAR ShortName="Error" ClassName="VarLog" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" SaveLocation="V" Control="EDVCtrlLog" />
+                    <!--.Coopeshop.edvStats.Coopeshop.User.Open-->
+                    <VAR ShortName="Open" ClassName="" AutoReset="1" Securized="0" ReadOnly="0" ValueType="Boolean" />
+                    <DOM ShortName="Row">
+                        <DOM ShortName="Address">
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.Address.Foot-->
+                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                        </DOM>
+                        <DOM ShortName="City">
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.City.Foot-->
+                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                        </DOM>
+                        <DOM ShortName="ContactType">
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.ContactType.Foot-->
+                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                        </DOM>
+                        <DOM ShortName="EMail">
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.EMail.Foot-->
+                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                        </DOM>
+                        <DOM ShortName="Enabled">
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.Enabled.Cell-->
+                            <VAR ShortName="Cell" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                <Value><![CDATA[<?if(this.Value() == 1){?>
+<input type="checkbox" checked/>
+<?}?>]]></Value>
+                                <!--.Coopeshop.edvStats.Coopeshop.User.Row.Enabled.Cell.Default-->
+                                <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                    <Value><![CDATA[False]]></Value>
+                                </VAR>
+                            </VAR>
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.Enabled.Foot-->
+                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                        </DOM>
+                        <DOM ShortName="Enabled1">
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.Enabled1.Foot-->
+                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.Enabled1.Visible-->
+                            <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                <Value><![CDATA[False]]></Value>
+                            </VAR>
+                        </DOM>
+                        <DOM ShortName="IdContact">
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.IdContact.Cell-->
+                            <VAR ShortName="Cell" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                <Value><![CDATA[<span class="<?=this.Value()< 70 ? "petit" : "grand"?>"><?=this.Value()?></span>]]></Value>
+                                <!--.Coopeshop.edvStats.Coopeshop.User.Row.IdContact.Cell.css-->
+                                <VAR ShortName="css" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                    <Value><![CDATA[color: green;
+}
+.petit {
+font-size: small;
+}
+.grand {
+font-size: large;]]></Value>
+                                </VAR>
+                                <!--.Coopeshop.edvStats.Coopeshop.User.Row.IdContact.Cell.Default-->
+                                <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                    <Value><![CDATA[False]]></Value>
+                                </VAR>
+                            </VAR>
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.IdContact.Foot-->
+                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                        </DOM>
+                        <DOM ShortName="IdContactRef">
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.IdContactRef.Foot-->
+                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                        </DOM>
+                        <DOM ShortName="IdUser">
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.IdUser.Cell-->
+                            <VAR ShortName="Cell" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                <!--.Coopeshop.edvStats.Coopeshop.User.Row.IdUser.Cell.css-->
+                                <VAR ShortName="css" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                <!--.Coopeshop.edvStats.Coopeshop.User.Row.IdUser.Cell.Default-->
+                                <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                    <Value><![CDATA[True]]></Value>
+                                </VAR>
+                            </VAR>
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.IdUser.Foot-->
+                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                        </DOM>
+                        <DOM ShortName="Name">
+                            <DOM ShortName="Cell">
+                                <!--.Coopeshop.edvStats.Coopeshop.User.Row.Name.Cell.css-->
+                                <VAR ShortName="css" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                    <Value><![CDATA[font-style: italic;]]></Value>
+                                </VAR>
+                            </DOM>
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.Name.Foot-->
+                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                        </DOM>
+                        <DOM ShortName="Name1">
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.Name1.Foot-->
+                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                        </DOM>
+                        <DOM ShortName="Phone1">
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.Phone1.Foot-->
+                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                        </DOM>
+                        <DOM ShortName="Phone2">
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.Phone2.Foot-->
+                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                        </DOM>
+                        <DOM ShortName="PIPO">
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.PIPO.Cell-->
+                            <VAR ShortName="Cell" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                <Value><![CDATA[<a class="edvicon edvimgSave">enregistrer</a>]]></Value>
+                                <!--.Coopeshop.edvStats.Coopeshop.User.Row.PIPO.Cell.Default-->
+                                <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                    <Value><![CDATA[False]]></Value>
+                                </VAR>
+                            </VAR>
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.PIPO.Foot-->
+                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                        </DOM>
+                        <DOM ShortName="ZipCode">
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row.ZipCode.Foot-->
+                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                        </DOM>
+                        <DOM ShortName="_table">
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row._table.Foot-->
+                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                <!--.Coopeshop.edvStats.Coopeshop.User.Row._table.Foot.Visible-->
+                                <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                    <Value><![CDATA[False]]></Value>
+                                </VAR>
+                            </VAR>
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Row._table.Head-->
+                            <VAR ShortName="Head" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                                <Value><![CDATA[<pre><?//=edvjs.json(this)?></pre>]]></Value>
+                                <!--.Coopeshop.edvStats.Coopeshop.User.Row._table.Head.Default-->
+                                <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                    <Value><![CDATA[False]]></Value>
+                                </VAR>
+                            </VAR>
+                        </DOM>
+                    </DOM>
+                    <!--.Coopeshop.edvStats.Coopeshop.User.RowsCount-->
+                    <VAR ShortName="RowsCount" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer">
+                        <Value><![CDATA[10]]></Value>
+                        <!--.Coopeshop.edvStats.Coopeshop.User.RowsCount.Limit-->
+                        <VAR ShortName="Limit" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Integer">
+                            <Value><![CDATA[10]]></Value>
+                        </VAR>
+                    </VAR>
+                    <!--.Coopeshop.edvStats.Coopeshop.User.Source-->
+                    <VAR ShortName="Source" ClassName="VarDataSource" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Text">
+                        <Script><![CDATA["Provider=MSDASQL;DRIVER={MySQL ODBC 5.1 Driver};SERVER=" + :DBServer + ";PORT=3306;DATABASE=" + :DBName + "; OPTION=19035;UID=" + :DBUser + ";PWD=" + :DBPassword;]]></Script>
+                        <!--.Coopeshop.edvStats.Coopeshop.User.Source.DBName-->
+                        <VAR ShortName="DBName" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                            <Value><![CDATA[coopeshop]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.User.Source.DBPassword-->
+                        <VAR ShortName="DBPassword" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Password" />
+                        <!--.Coopeshop.edvStats.Coopeshop.User.Source.DBServer-->
+                        <VAR ShortName="DBServer" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                            <Value><![CDATA[localhost]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.User.Source.DBType-->
+                        <VAR ShortName="DBType" ClassName="VarSelection" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Selection">
+                            <Value><![CDATA[MySQL]]></Value>
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Source.DBType.InsertAuto-->
+                            <VAR ShortName="InsertAuto" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                <Value><![CDATA[False]]></Value>
+                            </VAR>
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Source.DBType.InValues-->
+                            <VAR ShortName="InValues" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                                <Value><![CDATA[True]]></Value>
+                            </VAR>
+                            <!--.Coopeshop.edvStats.Coopeshop.User.Source.DBType.Values-->
+                            <VAR ShortName="Values" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Text">
+                                <Value><![CDATA[Internal
+EDV
+XML
+Oracle
+SQLServer
+Access
+TextFile
+MySQL
+Excel
+FileSystem
+FTP
+EDVars
+EDVServer]]></Value>
+                            </VAR>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.User.Source.DBUser-->
+                        <VAR ShortName="DBUser" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                            <Value><![CDATA[root]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.User.Source.Id-->
+                        <VAR ShortName="Id" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="VariableName">
+                            <Value><![CDATA[_Script]]></Value>
+                        </VAR>
+                        <!--.Coopeshop.edvStats.Coopeshop.User.Source._Script-->
+                        <VAR ShortName="_Script" ClassName="" AutoReset="0" Securized="1" ReadOnly="1" ValueType="Code">
+                            <Value><![CDATA["Provider=MSDASQL;DRIVER={MySQL ODBC 5.1 Driver};SERVER=" + :DBServer + ";PORT=3306;DATABASE=" + :DBName + "; OPTION=19035;UID=" + :DBUser + ";PWD=" + :DBPassword;]]></Value>
+                        </VAR>
+                    </VAR>
+                    <!--.Coopeshop.edvStats.Coopeshop.User.SQLSelect-->
+                    <VAR ShortName="SQLSelect" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                        <Value><![CDATA[SELECT IdUser, C.Name, U.Enabled, C.*, '' AS PIPO
+FROM user U
+INNER JOIN contact C
+    ON U.IdUser = C.IdContact]]></Value>
+                    </VAR>
+                    <!--.Coopeshop.edvStats.Coopeshop.User.Status-->
+                    <VAR ShortName="Status" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer" SaveLocation="V" />
+                    <!--.Coopeshop.edvStats.Coopeshop.User.Text-->
+                    <VAR ShortName="Text" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                        <Value><![CDATA[User]]></Value>
+                    </VAR>
+                    <!--.Coopeshop.edvStats.Coopeshop.User.Visible-->
+                    <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                        <Value><![CDATA[True]]></Value>
+                        <!--.Coopeshop.edvStats.Coopeshop.User.Visible.DesignOnly-->
+                        <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
+                            <Value><![CDATA[True]]></Value>
+                        </VAR>
+                    </VAR>
+                </VAR>
+            </VAR>
+        </VAR>
+    </DOM>
+</EDV>
