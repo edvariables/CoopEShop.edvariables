@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EDV>
-    <Version Major="1" Minor="0" Build="0" Revision="130">1.0.0.130</Version>
+    <Version Major="1" Minor="0" Build="0" Revision="131">1.0.0.131</Version>
     <DOM ShortName="EDV">
         <!--.EDV.CoopEShop-->
         <VAR ShortName="CoopEShop" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Domain">
@@ -6076,7 +6076,7 @@ if(!arguments.DataTable){
                         </VAR>
                         <!--.EDV.CoopEShop.DB.Fournisseur.Row.IdContact-->
                         <VAR ShortName="IdContact" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Integer">
-                            <Value><![CDATA[378]]></Value>
+                            <Value><![CDATA[16]]></Value>
                         </VAR>
                         <!--.EDV.CoopEShop.DB.Fournisseur.Row.IdFournisseur-->
                         <VAR ShortName="IdFournisseur" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Integer">
@@ -6086,7 +6086,7 @@ if(!arguments.DataTable){
                         <VAR ShortName="Message" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" />
                         <!--.EDV.CoopEShop.DB.Fournisseur.Row.Name-->
                         <VAR ShortName="Name" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
-                            <Value><![CDATA[aaaaa]]></Value>
+                            <Value><![CDATA[Manu de Chevinay]]></Value>
                         </VAR>
                         <!--.EDV.CoopEShop.DB.Fournisseur.Row.NumCompte-->
                         <VAR ShortName="NumCompte" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Integer">
@@ -9527,7 +9527,7 @@ else "";
                     </VAR>
                     <!--.EDV.CoopEShop.edvAppli.DataSource.DBPassword-->
                     <VAR ShortName="DBPassword" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Password" SaveLocation="X">
-                        <Value Crypt="True"><![CDATA[ARZQN9sEvmOXMGfUk1MWkqeV5IjGphkaXSiXw4yfzijDFhcknrxxSmYpr9MJwQ+/]]></Value>
+                        <Value Crypt="True"><![CDATA[AfetQtrEQz+dmHRk7a2/HS1Kpoow/klGZ7wNMLT5dnJ9kh7+1YuznG5ZuCTt6eeT]]></Value>
                     </VAR>
                     <!--.EDV.CoopEShop.edvAppli.DataSource.DBServer-->
                     <VAR ShortName="DBServer" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" SaveLocation="X">
@@ -9643,7 +9643,7 @@ null;]]></Script>
                             <Script><![CDATA["C:\\temp\\APV.BAK"]]></Script>
                             <!--.EDV.CoopEShop.edvAppli.DBBackup.Restore.File.Exists-->
                             <VAR ShortName="Exists" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean">
-                                <Value><![CDATA[True]]></Value>
+                                <Value><![CDATA[False]]></Value>
                             </VAR>
                         </VAR>
                         <!--.EDV.CoopEShop.edvAppli.DBBackup.Restore.Open-->
@@ -9702,7 +9702,7 @@ WITH RECOVERY]]></Value>
                     <VAR ShortName="Send" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean" SaveLocation="V" Control="EDVCtrlButton" />
                     <!--.EDV.CoopEShop.edvAppli.EMail.Smtp-->
                     <VAR ShortName="Smtp" ClassName="Smtp@EDVMail" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" SaveLocation="X">
-                        <Value><![CDATA[localhost]]></Value>
+                        <Value><![CDATA[edvariables.net]]></Value>
                         <!--.EDV.CoopEShop.edvAppli.EMail.Smtp.Password-->
                         <VAR ShortName="Password" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Password" SaveLocation="X">
                             <Value Crypt="True"><![CDATA[WnuOgyoSf/vHJsoiig9qFdNgcL8keFSzCOZrIGuhWG0=]]></Value>
@@ -10622,7 +10622,7 @@ null;]]></Script>
                     <Script><![CDATA[:Major + "." + :Minor + "." + :Revision + "." + :Build]]></Script>
                     <!--.EDV.CoopEShop.edvAppli.Version.Build-->
                     <VAR ShortName="Build" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer">
-                        <Value><![CDATA[38]]></Value>
+                        <Value><![CDATA[39]]></Value>
                         <!--.EDV.CoopEShop.edvAppli.Version.Build.OnChecking-->
                         <VAR ShortName="OnChecking" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Null">
                             <Script><![CDATA[when(..Save:Checking)
@@ -13706,7 +13706,7 @@ edvTools.Dialog = function(varName, params, options, className){
                 <VAR ShortName="Inner" ClassName="VarLink" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Link">
                     <!--.EDV.CoopEShop.Visual.Inner.@-->
                     <VAR ShortName="@" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="VariableName">
-                        <Value><![CDATA[.EDV.CoopEShop.DB.Commande.Html.Edit]]></Value>
+                        <Value><![CDATA[.EDV.CoopEShop.DB.Fournisseur.Html.Edit.Dialog]]></Value>
                         <!--.EDV.CoopEShop.Visual.Inner.@.Exists-->
                         <VAR ShortName="Exists" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Boolean">
                             <Script><![CDATA[if (edvClient!=null) edvClient.VariableExists(..);]]></Script>
