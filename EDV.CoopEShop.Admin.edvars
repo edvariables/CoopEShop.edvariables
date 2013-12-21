@@ -1593,7 +1593,7 @@ function UserLoginCheck(){
                         </VAR>
                         <!--.{Applications}.CoopEShop.Admin.edvAppli.Version.Revision-->
                         <VAR ShortName="Revision" ClassName="" AutoReset="0" Securized="1" ReadOnly="1" ValueType="Integer">
-                            <Value><![CDATA[16]]></Value>
+                            <Value><![CDATA[17]]></Value>
                             <!--.{Applications}.CoopEShop.Admin.edvAppli.Version.Revision.OnSaving-->
                             <VAR ShortName="OnSaving" ClassName="" AutoReset="0" Securized="1" ReadOnly="1" ValueType="Null">
                                 <Script><![CDATA[when(..Save:Checking)
@@ -2547,7 +2547,7 @@ name: "edvArgs.Row." + this.Column
                             <DOM ShortName="SQLSelect">
                                 <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.SQLSelect.IDARTICLE-->
                                 <VAR ShortName="IDARTICLE" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Integer">
-                                    <Value><![CDATA[409]]></Value>
+                                    <Value><![CDATA[86]]></Value>
                                     <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.SQLSelect.IDARTICLE.DesignOnly-->
                                     <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
                                         <Value><![CDATA[False]]></Value>
@@ -3357,7 +3357,7 @@ null;]]></Script>
                         <DOM ShortName="Catalogues">
                             <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Catalogues.List-->
                             <VAR ShortName="List" ClassName="VarDataTable" AutoReset="0" Securized="0" ReadOnly="0" ValueType="DataTable">
-                                <Value><![CDATA[<?xml version="1.0" encoding="utf-16"?><DataTable><Schema><xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"><xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="MySQL" msdata:UseCurrentLocale="true"><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element name="MySQL"><xs:complexType><xs:sequence><xs:element name="IdContact" type="xs:int" minOccurs="0" /><xs:element name="IdDossier" type="xs:int" minOccurs="0" /><xs:element name="TypeDossier" type="xs:string" minOccurs="0" /><xs:element name="DateDossier" type="xs:dateTime" minOccurs="0" /><xs:element name="Name" type="xs:string" minOccurs="0" /><xs:element name="nbCmdes" type="xs:int" minOccurs="0" /><xs:element name="ClosedDate" type="xs:dateTime" minOccurs="0" /><xs:element name="Status" type="xs:string" minOccurs="0" /><xs:element name="Visibility" type="xs:string" minOccurs="0" /><xs:element name="Comment" type="xs:string" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema></Schema><Data /></DataTable>]]></Value>
+                                <Value><![CDATA[<?xml version="1.0" encoding="utf-16"?><DataTable><Schema><xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"><xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="MySQL" msdata:UseCurrentLocale="true"><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element name="MySQL"><xs:complexType><xs:sequence><xs:element name="IdDossier" type="xs:int" minOccurs="0" /><xs:element name="nbCmdes" type="xs:int" minOccurs="0" /><xs:element name="Name" type="xs:string" minOccurs="0" /><xs:element name="Visibility" type="xs:string" minOccurs="0" /><xs:element name="Comment" type="xs:string" minOccurs="0" /><xs:element name="Status" type="xs:string" minOccurs="0" /><xs:element name="ClosedDate" type="xs:dateTime" minOccurs="0" /><xs:element name="DateDossier" type="xs:dateTime" minOccurs="0" /><xs:element name="IdContact" type="xs:int" minOccurs="0" /><xs:element name="TypeDossier" type="xs:string" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema></Schema><Data /></DataTable>]]></Value>
                                 <Meta><![CDATA[<HTMLEDITOR />]]></Meta>
                                 <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Catalogues.List.Close-->
                                 <VAR ShortName="Close" ClassName="" AutoReset="1" Securized="1" ReadOnly="0" ValueType="Boolean" />
@@ -3388,7 +3388,7 @@ null;]]></Script>
                                 </VAR>
                                 <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Catalogues.List.SQLSelect-->
                                 <VAR ShortName="SQLSelect" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
-                                    <Value><![CDATA[SELECT d.IdContact, d.IdDossier, d.TypeDossier, d.DateDossier, d.Name, COUNT(cmd.IdDossier) AS nbCmdes, d.ClosedDate, d.Status, d.Visibility, d.Comment
+                                    <Value><![CDATA[SELECT d.IdDossier, COUNT(cmd.IdDossier) AS nbCmdes, d.Name, d.Visibility, d.Comment, d.Status, d.ClosedDate, d.DateDossier, d.IdContact, d.TypeDossier
 FROM dossier d
 LEFT JOIN dossier cmd
 	ON cmd.IdDossierRef = d.IdDossier
@@ -3528,7 +3528,7 @@ background-color: #E0E7F0;
                                     <DOM ShortName="DateDossier">
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Catalogues.List.Row.DateDossier.Cell-->
                                         <VAR ShortName="Cell" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
-                                            <Value><![CDATA[<?=this.IsNull() ? "" : this.Value().ToString("d MMM yyyy HH:mm") ?>]]></Value>
+                                            <Value><![CDATA[<?=this.IsNull() ? "" : this.Value().ToString("dd/MM/yyyy") ?>]]></Value>
                                         </VAR>
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Catalogues.List.Row.DateDossier.Filter-->
                                         <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
@@ -3536,12 +3536,14 @@ background-color: #E0E7F0;
                                         <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Catalogues.List.Row.DateDossier.Head-->
                                         <VAR ShortName="Head" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
-                                            <Value><![CDATA[Date]]></Value>
+                                            <Value><![CDATA[Créé le]]></Value>
                                         </VAR>
                                         <DOM ShortName="Cell">
                                             <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Catalogues.List.Row.DateDossier.Cell.css-->
                                             <VAR ShortName="css" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
-                                                <Value><![CDATA[white-space: nowrap;]]></Value>
+                                                <Value><![CDATA[font-size: 12px;
+padding-right: 4px;
+]]></Value>
                                             </VAR>
                                             <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Catalogues.List.Row.DateDossier.Cell.Default-->
                                             <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
@@ -3568,6 +3570,13 @@ background-color: #E0E7F0;
                                         <VAR ShortName="Head" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
                                             <Value><![CDATA[#]]></Value>
                                         </VAR>
+                                        <DOM ShortName="Cell">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Catalogues.List.Row.IdDossier.Cell.css-->
+                                            <VAR ShortName="css" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                                <Value><![CDATA[font-size: 12px;
+font-family: Courier New;]]></Value>
+                                            </VAR>
+                                        </DOM>
                                     </DOM>
                                     <DOM ShortName="Name">
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Catalogues.List.Row.Name.Filter-->
@@ -3596,7 +3605,7 @@ background-color: #E0E7F0;
                                         <DOM ShortName="Cell">
                                             <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Catalogues.List.Row.nbCmdes.Cell.css-->
                                             <VAR ShortName="css" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
-                                                <Value><![CDATA[text-align: right;]]></Value>
+                                                <Value><![CDATA[padding-right: 8px;]]></Value>
                                             </VAR>
                                             <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Catalogues.List.Row.nbCmdes.Cell.Default-->
                                             <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
@@ -4039,11 +4048,11 @@ name: "edvArgs.Row.Unit"
                                         </VAR>
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.SQLSelect.IdDossier-->
                                         <VAR ShortName="IdDossier" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Integer">
-                                            <Value><![CDATA[131215011]]></Value>
+                                            <Value><![CDATA[131202011]]></Value>
                                         </VAR>
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.SQLSelect.LINE-->
                                         <VAR ShortName="LINE" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
-                                            <Value><![CDATA[2]]></Value>
+                                            <Value><![CDATA[3]]></Value>
                                         </VAR>
                                         <DOM ShortName="IdDossier">
                                             <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.SQLSelect.IdDossier.DesignOnly-->
@@ -4429,6 +4438,10 @@ width: 16px;
                                             </VAR>
                                         </DOM>
                                         <DOM ShortName="Quantity">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.Quantity.Cell-->
+                                            <VAR ShortName="Cell" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                                <Value><![CDATA[<?=this.IsNull() ? "" : Regex.Replace(Regex.Replace(this.Value().ToString(), "[,\\.]000$", "&nbsp;&nbsp;&nbsp;&nbsp;"), "00$", "&nbsp;&nbsp;") ?>]]></Value>
+                                            </VAR>
                                             <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.Quantity.Filter-->
                                             <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
                                             <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.Quantity.Foot-->
@@ -4442,6 +4455,10 @@ width: 16px;
                                                 <VAR ShortName="css" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
                                                     <Value><![CDATA[text-align: right;
 font-family: Courier New;]]></Value>
+                                                </VAR>
+                                                <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.Quantity.Cell.Default-->
+                                                <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                    <Value><![CDATA[False]]></Value>
                                                 </VAR>
                                             </DOM>
                                         </DOM>
@@ -4497,11 +4514,11 @@ font-family: Courier New;]]></Value>
                                         </VAR>
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.SQLSelect.IDCONTACT-->
                                         <VAR ShortName="IDCONTACT" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
-                                            <Value><![CDATA[43]]></Value>
+                                            <Value><![CDATA[42]]></Value>
                                         </VAR>
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.SQLSelect.IdDossier-->
                                         <VAR ShortName="IdDossier" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Integer">
-                                            <Value><![CDATA[131117001]]></Value>
+                                            <Value><![CDATA[131216008]]></Value>
                                         </VAR>
                                         <DOM ShortName="_filterSets">
                                             <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.SQLSelect._filterSets.list-->
