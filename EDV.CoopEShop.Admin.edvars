@@ -305,36 +305,80 @@ null;]]></Value>
                         </DOM>
                         <DOM ShortName="Source">
                             <!--.{Applications}.CoopEShop.Admin.edvAppli.Data.Source.DBName-->
-                            <VAR ShortName="DBName" ClassName="" AutoReset="0" Securized="1" ReadOnly="1" ValueType="String">
+                            <VAR ShortName="DBName" ClassName="" AutoReset="0" Securized="1" ReadOnly="1" ValueType="String" SaveLocation=".">
                                 <Script><![CDATA[var lsFile = ..Save.File;//Fichier .edvars d'où est chargé l'application
 if (lsFile != "" && !lsFile.StartsWith("\t\t\tATTENTION")) lsFile.substring(0, lsFile.length-".edvars".length) + ".Params.xml";
 else "";]]></Script>
                             </VAR>
                             <!--.{Applications}.CoopEShop.Admin.edvAppli.Data.Source.DBPassword-->
-                            <VAR ShortName="DBPassword" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Password" />
+                            <VAR ShortName="DBPassword" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Password" SaveLocation=".">
+                                <Value Crypt="True"><![CDATA[rNr53jbT76+skz8oFAbAfg==]]></Value>
+                            </VAR>
                             <!--.{Applications}.CoopEShop.Admin.edvAppli.Data.Source.DBServer-->
-                            <VAR ShortName="DBServer" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
+                            <VAR ShortName="DBServer" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
+                                <Value><![CDATA[test]]></Value>
+                            </VAR>
                             <!--.{Applications}.CoopEShop.Admin.edvAppli.Data.Source.DBType-->
-                            <VAR ShortName="DBType" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                            <VAR ShortName="DBType" ClassName="VarSelection" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
                                 <Value><![CDATA[XML]]></Value>
                             </VAR>
                             <!--.{Applications}.CoopEShop.Admin.edvAppli.Data.Source.DBUser-->
-                            <VAR ShortName="DBUser" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
+                            <VAR ShortName="DBUser" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
+                                <Value><![CDATA[convergence]]></Value>
+                            </VAR>
+                            <DOM ShortName="DBType">
+                                <!--.{Applications}.CoopEShop.Admin.edvAppli.Data.Source.DBType.InsertAuto-->
+                                <VAR ShortName="InsertAuto" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                    <Value><![CDATA[False]]></Value>
+                                </VAR>
+                                <!--.{Applications}.CoopEShop.Admin.edvAppli.Data.Source.DBType.InValues-->
+                                <VAR ShortName="InValues" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                    <Value><![CDATA[True]]></Value>
+                                </VAR>
+                                <!--.{Applications}.CoopEShop.Admin.edvAppli.Data.Source.DBType.Values-->
+                                <VAR ShortName="Values" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Text">
+                                    <Value><![CDATA[Internal
+EDV
+XML
+SQLite
+Oracle
+SQLServer
+Access
+TextFile
+MySQL
+Excel
+FileSystem
+FTP
+EDVars
+EDVServer
+EDVar
+INI
+Regex]]></Value>
+                                </VAR>
+                            </DOM>
                         </DOM>
                     </DOM>
                     <DOM ShortName="DataSource">
                         <!--.{Applications}.CoopEShop.Admin.edvAppli.DataSource.DBName-->
-                        <VAR ShortName="DBName" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
+                        <VAR ShortName="DBName" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
+                            <Value><![CDATA[galaxie]]></Value>
+                        </VAR>
                         <!--.{Applications}.CoopEShop.Admin.edvAppli.DataSource.DBPassword-->
-                        <VAR ShortName="DBPassword" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Password" />
+                        <VAR ShortName="DBPassword" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Password" SaveLocation=".">
+                            <Value Crypt="True"><![CDATA[rNr53jbT76+skz8oFAbAfg==]]></Value>
+                        </VAR>
                         <!--.{Applications}.CoopEShop.Admin.edvAppli.DataSource.DBServer-->
-                        <VAR ShortName="DBServer" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
+                        <VAR ShortName="DBServer" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
+                            <Value><![CDATA[test]]></Value>
+                        </VAR>
                         <!--.{Applications}.CoopEShop.Admin.edvAppli.DataSource.DBType-->
-                        <VAR ShortName="DBType" ClassName="VarSelection" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Selection">
+                        <VAR ShortName="DBType" ClassName="VarSelection" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Selection" SaveLocation=".">
                             <Value><![CDATA[Internal]]></Value>
                         </VAR>
                         <!--.{Applications}.CoopEShop.Admin.edvAppli.DataSource.DBUser-->
-                        <VAR ShortName="DBUser" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
+                        <VAR ShortName="DBUser" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
+                            <Value><![CDATA[convergence]]></Value>
+                        </VAR>
                         <DOM ShortName="DBType">
                             <!--.{Applications}.CoopEShop.Admin.edvAppli.DataSource.DBType.InsertAuto-->
                             <VAR ShortName="InsertAuto" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
@@ -682,15 +726,15 @@ null;
                             <Meta><![CDATA[<DESIGNER.LASTPRESENTATION>Window</DESIGNER.LASTPRESENTATION>]]></Meta>
                         </VAR>
                         <!--.{Applications}.CoopEShop.Admin.edvAppli.Log.LogQueue-->
-                        <VAR ShortName="LogQueue" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Object" SaveLocation="V" />
+                        <VAR ShortName="LogQueue" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Object" SaveLocation="V" Control="EDVCtrlLog" />
                         <DOM ShortName="AddDate">
                             <!--.{Applications}.CoopEShop.Admin.edvAppli.Log.AddDate.Format-->
-                            <VAR ShortName="Format" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Object">
+                            <VAR ShortName="Format" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
                                 <Value><![CDATA[HH:mm:ss.fff]]></Value>
                             </VAR>
                         </DOM>
-                        <DOM ShortName="Destination">
-                            <!--.{Applications}.CoopEShop.Admin.edvAppli.Log.Destination.Values-->
+                        <DOM ShortName="DESTINATION">
+                            <!--.{APPLICATIONS}.COOPESHOP.ADMIN.EDVAPPLI.LOG.DESTINATION.Values-->
                             <VAR ShortName="Values" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Text">
                                 <Value><![CDATA[Console
 Console + File=
@@ -727,7 +771,7 @@ null;]]></Script>
 }
 null;]]></Script>
                                 </VAR>
-                                <!--.{Applications}.CoopEShop.Admin.edvAppli.Log.LogQueue.Reduce.Period-->
+                                <!--.{APPLICATIONS}.COOPESHOP.ADMIN.EDVAPPLI.LOG.LOGQUEUE.REDUCE.Period-->
                                 <VAR ShortName="Period" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Double">
                                     <Value><![CDATA[86400000]]></Value>
                                 </VAR>
@@ -735,7 +779,7 @@ null;]]></Script>
                                 <VAR ShortName="Repeat" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
                                     <Value><![CDATA[True]]></Value>
                                 </VAR>
-                                <!--.{Applications}.CoopEShop.Admin.edvAppli.Log.LogQueue.Reduce.Start-->
+                                <!--.{APPLICATIONS}.COOPESHOP.ADMIN.EDVAPPLI.LOG.LOGQUEUE.REDUCE.Start-->
                                 <VAR ShortName="Start" ClassName="" AutoReset="1" Securized="1" ReadOnly="0" ValueType="Boolean" />
                                 <DOM ShortName="Repeat">
                                     <!--.{Applications}.CoopEShop.Admin.edvAppli.Log.LogQueue.Reduce.Repeat.OnChanging-->
@@ -772,11 +816,11 @@ null;]]></Script>
 }
 null;]]></Script>
                         </VAR>
-                        <!--.{Applications}.CoopEShop.Admin.edvAppli.Midnight.Period-->
+                        <!--.{APPLICATIONS}.COOPESHOP.ADMIN.EDVAPPLI.MIDNIGHT.Period-->
                         <VAR ShortName="Period" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Double">
                             <Value><![CDATA[61200000]]></Value>
                         </VAR>
-                        <!--.{Applications}.CoopEShop.Admin.edvAppli.Midnight.Start-->
+                        <!--.{APPLICATIONS}.COOPESHOP.ADMIN.EDVAPPLI.MIDNIGHT.Start-->
                         <VAR ShortName="Start" ClassName="" AutoReset="1" Securized="1" ReadOnly="0" ValueType="Boolean" />
                     </DOM>
                     <DOM ShortName="OnLoad">
@@ -1183,22 +1227,58 @@ null;]]></Value>
                             </DOM>
                             <DOM ShortName="Source">
                                 <!--.{Applications}.CoopEShop.Admin.edvAppli.User.Data.Source.DBName-->
-                                <VAR ShortName="DBName" ClassName="" AutoReset="0" Securized="1" ReadOnly="1" ValueType="String">
+                                <VAR ShortName="DBName" ClassName="" AutoReset="0" Securized="1" ReadOnly="1" ValueType="String" SaveLocation=".">
                                     <Script><![CDATA[var lsFile = ..Save.File;//Fichier .edvars d'où est chargé l'application
 if (lsFile != "" && !lsFile.StartsWith("\t\t\tATTENTION")) lsFile.substring(0, lsFile.length-".edvars".length) + ".user." + ..Id + ".xml";
 else "";
 ]]></Script>
                                 </VAR>
                                 <!--.{Applications}.CoopEShop.Admin.edvAppli.User.Data.Source.DBPassword-->
-                                <VAR ShortName="DBPassword" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Password" />
+                                <VAR ShortName="DBPassword" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Password" SaveLocation=".">
+                                    <Value Crypt="True"><![CDATA[rNr53jbT76+skz8oFAbAfg==]]></Value>
+                                </VAR>
                                 <!--.{Applications}.CoopEShop.Admin.edvAppli.User.Data.Source.DBServer-->
-                                <VAR ShortName="DBServer" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
+                                <VAR ShortName="DBServer" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
+                                    <Value><![CDATA[test]]></Value>
+                                </VAR>
                                 <!--.{Applications}.CoopEShop.Admin.edvAppli.User.Data.Source.DBType-->
-                                <VAR ShortName="DBType" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                <VAR ShortName="DBType" ClassName="VarSelection" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
                                     <Value><![CDATA[XML]]></Value>
                                 </VAR>
                                 <!--.{Applications}.CoopEShop.Admin.edvAppli.User.Data.Source.DBUser-->
-                                <VAR ShortName="DBUser" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
+                                <VAR ShortName="DBUser" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
+                                    <Value><![CDATA[convergence]]></Value>
+                                </VAR>
+                                <DOM ShortName="DBType">
+                                    <!--.{Applications}.CoopEShop.Admin.edvAppli.User.Data.Source.DBType.InsertAuto-->
+                                    <VAR ShortName="InsertAuto" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                        <Value><![CDATA[False]]></Value>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvAppli.User.Data.Source.DBType.InValues-->
+                                    <VAR ShortName="InValues" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                        <Value><![CDATA[True]]></Value>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvAppli.User.Data.Source.DBType.Values-->
+                                    <VAR ShortName="Values" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Text">
+                                        <Value><![CDATA[Internal
+EDV
+XML
+SQLite
+Oracle
+SQLServer
+Access
+TextFile
+MySQL
+Excel
+FileSystem
+FTP
+EDVars
+EDVServer
+EDVar
+INI
+Regex]]></Value>
+                                    </VAR>
+                                </DOM>
                             </DOM>
                         </DOM>
                         <DOM ShortName="Login">
@@ -1344,11 +1424,11 @@ function UserLoginCheck(){
                                     <VAR ShortName="Width" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Integer">
                                         <Value><![CDATA[206]]></Value>
                                     </VAR>
-                                    <!--.{Applications}.CoopEShop.Admin.edvAppli.User.Login.Visual.WIN.WindowStartPosition-->
+                                    <!--.{APPLICATIONS}.COOPESHOP.ADMIN.EDVAPPLI.USER.LOGIN.VISUAL.WIN.WindowStartPosition-->
                                     <VAR ShortName="WindowStartPosition" ClassName="FormStartPosition@System.Windows.Forms" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Object">
                                         <Value><![CDATA[Manual]]></Value>
                                     </VAR>
-                                    <!--.{Applications}.CoopEShop.Admin.edvAppli.User.Login.Visual.WIN.WindowState-->
+                                    <!--.{APPLICATIONS}.COOPESHOP.ADMIN.EDVAPPLI.USER.LOGIN.VISUAL.WIN.WindowState-->
                                     <VAR ShortName="WindowState" ClassName="FormWindowState@System.Windows.Forms" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Object">
                                         <Value><![CDATA[Normal]]></Value>
                                     </VAR>
@@ -1435,8 +1515,8 @@ function UserLoginCheck(){
                                 </DOM>
                             </VAR>
                         </DOM>
-                        <DOM ShortName="Users">
-                            <!--.{Applications}.CoopEShop.Admin.edvAppli.User.Users.@-->
+                        <DOM ShortName="USERS">
+                            <!--.{APPLICATIONS}.COOPESHOP.ADMIN.EDVAPPLI.USER.USERS.@-->
                             <VAR ShortName="@" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="VariableName">
                                 <Value><![CDATA[.EDV.CoopEShop.edvAppli.User.Users]]></Value>
                             </VAR>
@@ -1513,7 +1593,7 @@ function UserLoginCheck(){
                         </VAR>
                         <!--.{Applications}.CoopEShop.Admin.edvAppli.Version.Revision-->
                         <VAR ShortName="Revision" ClassName="" AutoReset="0" Securized="1" ReadOnly="1" ValueType="Integer">
-                            <Value><![CDATA[12]]></Value>
+                            <Value><![CDATA[16]]></Value>
                             <!--.{Applications}.CoopEShop.Admin.edvAppli.Version.Revision.OnSaving-->
                             <VAR ShortName="OnSaving" ClassName="" AutoReset="0" Securized="1" ReadOnly="1" ValueType="Null">
                                 <Script><![CDATA[when(..Save:Checking)
@@ -1682,11 +1762,11 @@ edvctrl(":ctrlHTML").Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyle
                             <VAR ShortName="Width" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Integer">
                                 <Value><![CDATA[271]]></Value>
                             </VAR>
-                            <!--.{Applications}.CoopEShop.Admin.edvAppli.Visual.WIN.WindowStartPosition-->
+                            <!--.{APPLICATIONS}.COOPESHOP.ADMIN.EDVAPPLI.VISUAL.WIN.WindowStartPosition-->
                             <VAR ShortName="WindowStartPosition" ClassName="FormStartPosition@System.Windows.Forms" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Object">
                                 <Value><![CDATA[Manual]]></Value>
                             </VAR>
-                            <!--.{Applications}.CoopEShop.Admin.edvAppli.Visual.WIN.WindowState-->
+                            <!--.{APPLICATIONS}.COOPESHOP.ADMIN.EDVAPPLI.VISUAL.WIN.WindowState-->
                             <VAR ShortName="WindowState" ClassName="FormWindowState@System.Windows.Forms" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Object">
                                 <Value><![CDATA[Normal]]></Value>
                             </VAR>
@@ -1708,6 +1788,10 @@ edvctrl(":ctrlHTML").Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyle
                     </DOM>
                 </DOM>
                 <DOM ShortName="edvStats">
+                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article-->
+                    <VAR ShortName="Article" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Domain">
+                        <Value><![CDATA[Article]]></Value>
+                    </VAR>
                     <!--.{Applications}.CoopEShop.Admin.edvStats.DesignMode-->
                     <VAR ShortName="DesignMode" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Boolean" SaveLocation="V" />
                     <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli-->
@@ -2014,21 +2098,59 @@ if(rows.length > 0) echo(rows[0]["Script"])
 else echo("/*source EDV inconnue*/")]]></Script>
                                 </VAR>
                                 <!--.{Applications}.CoopEShop.Admin.edvStats.{System}.EDVariables.Source.DBName-->
-                                <VAR ShortName="DBName" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" />
+                                <VAR ShortName="DBName" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
+                                    <Value><![CDATA[galaxie]]></Value>
+                                </VAR>
                                 <!--.{Applications}.CoopEShop.Admin.edvStats.{System}.EDVariables.Source.DBPassword-->
-                                <VAR ShortName="DBPassword" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Password" />
+                                <VAR ShortName="DBPassword" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Password" SaveLocation=".">
+                                    <Value Crypt="True"><![CDATA[rNr53jbT76+skz8oFAbAfg==]]></Value>
+                                </VAR>
                                 <!--.{Applications}.CoopEShop.Admin.edvStats.{System}.EDVariables.Source.DBServer-->
-                                <VAR ShortName="DBServer" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" />
+                                <VAR ShortName="DBServer" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
+                                    <Value><![CDATA[test]]></Value>
+                                </VAR>
                                 <!--.{Applications}.CoopEShop.Admin.edvStats.{System}.EDVariables.Source.DBType-->
-                                <VAR ShortName="DBType" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                                <VAR ShortName="DBType" ClassName="VarSelection" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
                                     <Value><![CDATA[EDV]]></Value>
                                 </VAR>
                                 <!--.{Applications}.CoopEShop.Admin.edvStats.{System}.EDVariables.Source.DBUser-->
-                                <VAR ShortName="DBUser" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" />
+                                <VAR ShortName="DBUser" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
+                                    <Value><![CDATA[convergence]]></Value>
+                                </VAR>
                                 <!--.{Applications}.CoopEShop.Admin.edvStats.{System}.EDVariables.Source.Id-->
                                 <VAR ShortName="Id" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="VariableName">
                                     <Value><![CDATA[EDV]]></Value>
                                 </VAR>
+                                <DOM ShortName="DBType">
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.{System}.EDVariables.Source.DBType.InsertAuto-->
+                                    <VAR ShortName="InsertAuto" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                        <Value><![CDATA[False]]></Value>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.{System}.EDVariables.Source.DBType.InValues-->
+                                    <VAR ShortName="InValues" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                        <Value><![CDATA[True]]></Value>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.{System}.EDVariables.Source.DBType.Values-->
+                                    <VAR ShortName="Values" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Text">
+                                        <Value><![CDATA[Internal
+EDV
+XML
+SQLite
+Oracle
+SQLServer
+Access
+TextFile
+MySQL
+Excel
+FileSystem
+FTP
+EDVars
+EDVServer
+EDVar
+INI
+Regex]]></Value>
+                                    </VAR>
+                                </DOM>
                             </DOM>
                             <DOM ShortName="SQLSelect">
                                 <!--.{Applications}.CoopEShop.Admin.edvStats.{System}.EDVariables.SQLSelect.ROOTDOMAIN-->
@@ -2158,6 +2280,298 @@ null;]]></Script>
                             </VAR>
                         </DOM>
                     </VAR>
+                    <DOM ShortName="Article">
+                        <!--.{Applications}.CoopEShop.Admin.edvStats.Article._Index-->
+                        <VAR ShortName="_Index" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Integer">
+                            <Value><![CDATA[0]]></Value>
+                        </VAR>
+                        <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit-->
+                        <VAR ShortName="Edit" ClassName="VarDataTable" AutoReset="0" Securized="0" ReadOnly="0" ValueType="DataTable">
+                            <Value><![CDATA[<?xml version="1.0" encoding="utf-16"?><DataTable><Schema><xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"><xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="MySQL" msdata:UseCurrentLocale="true"><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element name="MySQL"><xs:complexType><xs:sequence><xs:element name="Category" type="xs:string" minOccurs="0" /><xs:element name="artCategory" type="xs:string" minOccurs="0" /><xs:element name="Name" type="xs:string" minOccurs="0" /><xs:element name="Image" type="xs:string" minOccurs="0" /><xs:element name="IdArticle" type="xs:int" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema></Schema><Data /></DataTable>]]></Value>
+                            <Meta><![CDATA[<HTMLEDITOR />]]></Meta>
+                            <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit._Index-->
+                            <VAR ShortName="_Index" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Integer">
+                                <Value><![CDATA[0]]></Value>
+                            </VAR>
+                            <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Close-->
+                            <VAR ShortName="Close" ClassName="" AutoReset="1" Securized="1" ReadOnly="0" ValueType="Boolean" />
+                            <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.edvDocument-->
+                            <VAR ShortName="edvDocument" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                <Value><![CDATA[<?=edv.HTML.edvStat(arguments, edvSender, edvClient)?>]]></Value>
+                                <Meta><![CDATA[<HTMLEDITOR />]]></Meta>
+                            </VAR>
+                            <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.edvStat-->
+                            <VAR ShortName="edvStat" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Object" SaveLocation="V" />
+                            <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.edvSubmit-->
+                            <VAR ShortName="edvSubmit" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                <Value><![CDATA[<?edvReturn(edvjs.json(arguments));
+?>]]></Value>
+                            </VAR>
+                            <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Error-->
+                            <VAR ShortName="Error" ClassName="VarLog" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" SaveLocation="V" Control="EDVCtrlLog" />
+                            <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Icon-->
+                            <VAR ShortName="Icon" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                <Value><![CDATA[imgEDVTypeDataTable]]></Value>
+                            </VAR>
+                            <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Insert-->
+                            <VAR ShortName="Insert" ClassName="" AutoReset="1" Securized="1" ReadOnly="0" ValueType="Boolean" />
+                            <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.NewRow-->
+                            <VAR ShortName="NewRow" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                <Value><![CDATA[False]]></Value>
+                            </VAR>
+                            <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Open-->
+                            <VAR ShortName="Open" ClassName="" AutoReset="1" Securized="0" ReadOnly="0" ValueType="Boolean" />
+                            <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.RowsCount-->
+                            <VAR ShortName="RowsCount" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer">
+                                <Value><![CDATA[0]]></Value>
+                            </VAR>
+                            <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.SQLInsert-->
+                            <VAR ShortName="SQLInsert" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                            <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.SQLSelect-->
+                            <VAR ShortName="SQLSelect" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                <Value><![CDATA[SELECT a.Category, pcat.Label AS artCategory, a.Name, a.Image, a.IdArticle
+FROM article a
+LEFT JOIN parameter pcat
+	ON pcat.Domain = 'ARTCAT'
+	AND pcat.IdParam = a.Category
+WHERE a.IdArticle = :IDARTICLE]]></Value>
+                            </VAR>
+                            <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Status-->
+                            <VAR ShortName="Status" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer" SaveLocation="V" />
+                            <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Text-->
+                            <VAR ShortName="Text" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                                <Value><![CDATA[Edition]]></Value>
+                            </VAR>
+                            <DOM ShortName="edvSubmit">
+                                <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.edvSubmit._Where-->
+                                <VAR ShortName="_Where" ClassName="VarFunction" AutoReset="0" Securized="1" ReadOnly="1" ValueType="Function">
+                                    <Script><![CDATA[when(..:Changing) me = null;]]></Script>
+                                </VAR>
+                            </DOM>
+                            <DOM ShortName="Open">
+                                <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Open._Index-->
+                                <VAR ShortName="_Index" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Integer">
+                                    <Value><![CDATA[0]]></Value>
+                                </VAR>
+                                <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Open.Icon-->
+                                <VAR ShortName="Icon" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                    <Value><![CDATA[imgEDVTypeBoolean]]></Value>
+                                </VAR>
+                                <DOM ShortName="Visible">
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Open.Visible.DesignOnly-->
+                                    <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                        <Value><![CDATA[False]]></Value>
+                                    </VAR>
+                                </DOM>
+                            </DOM>
+                            <DOM ShortName="Row">
+                                <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.artCategory-->
+                                <VAR ShortName="artCategory" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
+                                <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.Category-->
+                                <VAR ShortName="Category" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
+                                <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.Image-->
+                                <VAR ShortName="Image" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                    <Value><![CDATA[AJeter.jpg]]></Value>
+                                </VAR>
+                                <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.Name-->
+                                <VAR ShortName="Name" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
+                                <DOM ShortName="_table">
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row._table.cssBody-->
+                                    <VAR ShortName="cssBody" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                        <Value><![CDATA[text-align: left;
+background-color: white;]]></Value>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row._table.Filter-->
+                                    <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row._table.Foot-->
+                                    <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                        <Value><![CDATA[<?if(this.Rows.Count > 0){
+?><input type="hidden" name="edvCode" value="<?=edvSender.Name?>.edvSubmit"/>
+<input type="hidden" name="edvSender" value="<?=edvSender.Name?>"/>
+<input type="hidden" name="edvArgs.Row.IdArticle" value="<?=this.Value("IdArticle")?>"/>
+<a href="#<?=this.Value("IdArticle")?>" class="edvicon edvimgSave" onclick="<?
+	?>var r = edvSubmit($(this).parents('table:first').find(':input[name]'));<?
+	?>if(r && isNaN(r)) alert(r);<?
+	?>else $(this).edvExpander('parent', 'refresh');<?
+?>">Enregistrer</a>
+<a class="edvicon edvimgTrash" onclick="<?
+	?>var r = edvSubmit($(this).parents('table:first').find(':input[name]'), "edvArgs.action=delete");<?
+	?>if(r && isNaN(r)) alert(r);<?
+	?>else $(this).edvExpander('parent', 'refresh');<?
+?>">Supprimer</a>
+<?}?>]]></Value>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row._table.Head-->
+                                    <VAR ShortName="Head" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row._table.Rotate-->
+                                    <VAR ShortName="Rotate" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                        <Value><![CDATA[True]]></Value>
+                                    </VAR>
+                                    <DOM ShortName="Foot">
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row._table.Foot.css-->
+                                        <VAR ShortName="css" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                            <Value><![CDATA[padding-top: 1em;
+padding-bottom: 8px;
+}
+> .edvicon {
+margin-right: 1em;
+font-size: smaller;
+}]]></Value>
+                                        </VAR>
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row._table.Foot.Visible-->
+                                        <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                            <Value><![CDATA[True]]></Value>
+                                        </VAR>
+                                    </DOM>
+                                    <DOM ShortName="Head">
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row._table.Head.Visible-->
+                                        <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                            <Value><![CDATA[False]]></Value>
+                                        </VAR>
+                                    </DOM>
+                                </DOM>
+                                <DOM ShortName="artCategory">
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.artCategory.Cell-->
+                                    <VAR ShortName="Cell" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.artCategory.Filter-->
+                                    <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.artCategory.Foot-->
+                                    <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.artCategory.Visible-->
+                                    <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                        <Value><![CDATA[False]]></Value>
+                                    </VAR>
+                                    <DOM ShortName="Cell">
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.artCategory.Cell.Default-->
+                                        <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                            <Value><![CDATA[True]]></Value>
+                                        </VAR>
+                                    </DOM>
+                                </DOM>
+                                <DOM ShortName="Category">
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.Category.Cell-->
+                                    <VAR ShortName="Cell" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                        <Value><![CDATA[<?=this.Input({
+name: "edvArgs.Row." + this.Column
+, tag: "select"
+, style: "width:90%"
+, "values" : edv.Coopeshop.ArtCts
+, "label" : this.Value("artCategory")
+})?>]]></Value>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.Category.Filter-->
+                                    <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.Category.Foot-->
+                                    <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.Category.Head-->
+                                    <VAR ShortName="Head" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                        <Value><![CDATA[Catégorie]]></Value>
+                                    </VAR>
+                                    <DOM ShortName="Cell">
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.Category.Cell.Default-->
+                                        <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                            <Value><![CDATA[False]]></Value>
+                                        </VAR>
+                                    </DOM>
+                                </DOM>
+                                <DOM ShortName="IdArticle">
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.IdArticle.Filter-->
+                                    <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.IdArticle.Foot-->
+                                    <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.IdArticle.Visible-->
+                                    <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                        <Value><![CDATA[False]]></Value>
+                                    </VAR>
+                                </DOM>
+                                <DOM ShortName="Image">
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.Image.Cell-->
+                                    <VAR ShortName="Cell" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                        <Value><![CDATA[<?// TODO pour télécharger une image, il faut être dans une form, avec attribut multi-parts et le input[name] vaut un nom de variable EDV et non un edvArgs.
+
+if(!this.IsNull() && this.Value()){
+	?><img height="16" width="16" src="/edv/CoopEShop/Article.Image/<?=this.Value()?>"/><?
+}?><?=this.Input({
+name: "edvArgs.Row." + this.Column
+, type: "file"
+, "disabled": "disabled"
+})?>]]></Value>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.Image.Filter-->
+                                    <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.Image.Foot-->
+                                    <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                    <DOM ShortName="Cell">
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.Image.Cell.Default-->
+                                        <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                            <Value><![CDATA[False]]></Value>
+                                        </VAR>
+                                    </DOM>
+                                    <DOM ShortName="Head">
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.Image.Head.css-->
+                                        <VAR ShortName="css" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                            <Value><![CDATA[color: gray;]]></Value>
+                                        </VAR>
+                                    </DOM>
+                                </DOM>
+                                <DOM ShortName="Name">
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.Name.Cell-->
+                                    <VAR ShortName="Cell" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                        <Value><![CDATA[<?=this.Input({
+name: "edvArgs.Row." + this.Column
+, style: "width:90%"
+})?>]]></Value>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.Name.Filter-->
+                                    <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.Name.Foot-->
+                                    <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.Name.Head-->
+                                    <VAR ShortName="Head" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                        <Value><![CDATA[Nom]]></Value>
+                                    </VAR>
+                                    <DOM ShortName="Cell">
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Row.Name.Cell.Default-->
+                                        <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                            <Value><![CDATA[False]]></Value>
+                                        </VAR>
+                                    </DOM>
+                                </DOM>
+                            </DOM>
+                            <DOM ShortName="RowsCount">
+                                <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.RowsCount.Limit-->
+                                <VAR ShortName="Limit" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Integer">
+                                    <Value><![CDATA[30]]></Value>
+                                </VAR>
+                            </DOM>
+                            <DOM ShortName="SQLSelect">
+                                <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.SQLSelect.IDARTICLE-->
+                                <VAR ShortName="IDARTICLE" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Integer">
+                                    <Value><![CDATA[409]]></Value>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.SQLSelect.IDARTICLE.DesignOnly-->
+                                    <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                        <Value><![CDATA[False]]></Value>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.SQLSelect.IDARTICLE.Text-->
+                                    <VAR ShortName="Text" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                        <Value><![CDATA[IDARTICLE]]></Value>
+                                    </VAR>
+                                </VAR>
+                            </DOM>
+                            <DOM ShortName="Visible">
+                                <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Edit.Visible.DesignOnly-->
+                                <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                    <Value><![CDATA[False]]></Value>
+                                </VAR>
+                            </DOM>
+                        </VAR>
+                        <DOM ShortName="Visible">
+                            <!--.{Applications}.CoopEShop.Admin.edvStats.Article.Visible.DesignOnly-->
+                            <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                <Value><![CDATA[False]]></Value>
+                            </VAR>
+                        </DOM>
+                    </DOM>
                     <DOM ShortName="edvAppli">
                         <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli.ApplicationId-->
                         <VAR ShortName="ApplicationId" ClassName="" AutoReset="0" Securized="1" ReadOnly="1" ValueType="String">
@@ -2311,22 +2725,58 @@ null;]]></Value>
                             </DOM>
                             <DOM ShortName="Source">
                                 <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli.Data.Source.DBName-->
-                                <VAR ShortName="DBName" ClassName="" AutoReset="0" Securized="1" ReadOnly="1" ValueType="String">
+                                <VAR ShortName="DBName" ClassName="" AutoReset="0" Securized="1" ReadOnly="1" ValueType="String" SaveLocation=".">
                                     <Script><![CDATA[var lsFile = ..Save.File;//Fichier .edvars d'où est chargé l'application
 if (lsFile != "" && !lsFile.StartsWith("\t\t\tATTENTION")) Path.GetDirectoryName(lsFile) + "\\" + ..ApplicationId + ".Params.xml";
 else "";
 ]]></Script>
                                 </VAR>
                                 <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli.Data.Source.DBPassword-->
-                                <VAR ShortName="DBPassword" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Password" />
+                                <VAR ShortName="DBPassword" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Password" SaveLocation=".">
+                                    <Value Crypt="True"><![CDATA[rNr53jbT76+skz8oFAbAfg==]]></Value>
+                                </VAR>
                                 <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli.Data.Source.DBServer-->
-                                <VAR ShortName="DBServer" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
+                                <VAR ShortName="DBServer" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
+                                    <Value><![CDATA[test]]></Value>
+                                </VAR>
                                 <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli.Data.Source.DBType-->
-                                <VAR ShortName="DBType" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                <VAR ShortName="DBType" ClassName="VarSelection" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
                                     <Value><![CDATA[XML]]></Value>
                                 </VAR>
                                 <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli.Data.Source.DBUser-->
-                                <VAR ShortName="DBUser" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
+                                <VAR ShortName="DBUser" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
+                                    <Value><![CDATA[convergence]]></Value>
+                                </VAR>
+                                <DOM ShortName="DBType">
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli.Data.Source.DBType.InsertAuto-->
+                                    <VAR ShortName="InsertAuto" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                        <Value><![CDATA[False]]></Value>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli.Data.Source.DBType.InValues-->
+                                    <VAR ShortName="InValues" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                        <Value><![CDATA[True]]></Value>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli.Data.Source.DBType.Values-->
+                                    <VAR ShortName="Values" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Text">
+                                        <Value><![CDATA[Internal
+EDV
+XML
+SQLite
+Oracle
+SQLServer
+Access
+TextFile
+MySQL
+Excel
+FileSystem
+FTP
+EDVars
+EDVServer
+EDVar
+INI
+Regex]]></Value>
+                                    </VAR>
+                                </DOM>
                             </DOM>
                         </DOM>
                         <DOM ShortName="DataSource">
@@ -2335,23 +2785,55 @@ else "";
                                 <Value><![CDATA[..edvAppli.DataSource]]></Value>
                             </VAR>
                             <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli.DataSource.DBName-->
-                            <VAR ShortName="DBName" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                            <VAR ShortName="DBName" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
                                 <Value><![CDATA[qv]]></Value>
                             </VAR>
                             <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli.DataSource.DBPassword-->
-                            <VAR ShortName="DBPassword" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Password" />
+                            <VAR ShortName="DBPassword" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Password" SaveLocation=".">
+                                <Value Crypt="True"><![CDATA[rNr53jbT76+skz8oFAbAfg==]]></Value>
+                            </VAR>
                             <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli.DataSource.DBServer-->
-                            <VAR ShortName="DBServer" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                            <VAR ShortName="DBServer" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
                                 <Value><![CDATA[test]]></Value>
                             </VAR>
                             <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli.DataSource.DBType-->
-                            <VAR ShortName="DBType" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                            <VAR ShortName="DBType" ClassName="VarSelection" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
                                 <Value><![CDATA[MySQL]]></Value>
                             </VAR>
                             <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli.DataSource.DBUser-->
-                            <VAR ShortName="DBUser" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                            <VAR ShortName="DBUser" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" SaveLocation=".">
                                 <Value><![CDATA[qv]]></Value>
                             </VAR>
+                            <DOM ShortName="DBType">
+                                <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli.DataSource.DBType.InsertAuto-->
+                                <VAR ShortName="InsertAuto" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                    <Value><![CDATA[False]]></Value>
+                                </VAR>
+                                <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli.DataSource.DBType.InValues-->
+                                <VAR ShortName="InValues" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                    <Value><![CDATA[True]]></Value>
+                                </VAR>
+                                <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli.DataSource.DBType.Values-->
+                                <VAR ShortName="Values" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Text">
+                                    <Value><![CDATA[Internal
+EDV
+XML
+SQLite
+Oracle
+SQLServer
+Access
+TextFile
+MySQL
+Excel
+FileSystem
+FTP
+EDVars
+EDVServer
+EDVar
+INI
+Regex]]></Value>
+                                </VAR>
+                            </DOM>
                         </DOM>
                         <DOM ShortName="EDVVisual">
                             <!--.{Applications}.CoopEShop.Admin.edvStats.edvAppli.EDVVisual._Designer-->
@@ -2772,12 +3254,12 @@ if((traces = VarTrace(edvSender).List) != null) {
 	if (clear) traces.Clear();
 }?>]]></Value>
                             </VAR>
-                            <!--.{Applications}.CoopEShop.Admin.edvStats.edvStat.ChildSQLSelectChanged.Enabled-->
-                            <VAR ShortName="Enabled" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Boolean" SaveLocation="V">
+                            <!--.{APPLICATIONS}.COOPESHOP.ADMIN.EDVSTATS.EDVSTAT.CHILDSQLSELECTCHANGED.Enabled-->
+                            <VAR ShortName="Enabled" ClassName="" AutoReset="0" Securized="1" ReadOnly="1" ValueType="Boolean" SaveLocation="V">
                                 <Script><![CDATA[when(..edvAppli:Changed) ..edvAppli]]></Script>
                             </VAR>
-                            <!--.{Applications}.CoopEShop.Admin.edvStats.edvStat.ChildSQLSelectChanged.List-->
-                            <VAR ShortName="List" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Object" SaveLocation="V" Control="EDVCtrlArray" />
+                            <!--.{APPLICATIONS}.COOPESHOP.ADMIN.EDVSTATS.EDVSTAT.CHILDSQLSELECTCHANGED.List-->
+                            <VAR ShortName="List" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Object" SaveLocation="V" Control="EDVCtrlArray" />
                             <!--.{Applications}.CoopEShop.Admin.edvStats.edvStat.ChildSQLSelectChanged.OnChanging-->
                             <VAR ShortName="OnChanging" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Null">
                                 <Script><![CDATA[when(..:Changing)
@@ -2795,14 +3277,14 @@ if((traces = VarTrace(edvSender).List) != null) {
 }
 null;]]></Script>
                             </VAR>
-                            <!--.{Applications}.CoopEShop.Admin.edvStats.edvStat.ChildSQLSelectChanged.RegExp-->
-                            <VAR ShortName="RegExp" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="String">
+                            <!--.{APPLICATIONS}.COOPESHOP.ADMIN.EDVSTATS.EDVSTAT.CHILDSQLSELECTCHANGED.RegExp-->
+                            <VAR ShortName="RegExp" ClassName="" AutoReset="0" Securized="1" ReadOnly="1" ValueType="String">
                                 <Script><![CDATA[("^" + Regex.Escape(edvTools.Domain(edvTools.ParentName(..:NameUpper)))
 + ".+SQLSELECT$").ToUpperInvariant()
 ]]></Script>
                             </VAR>
-                            <!--.{Applications}.CoopEShop.Admin.edvStats.edvStat.ChildSQLSelectChanged.Reset-->
-                            <VAR ShortName="Reset" ClassName="" AutoReset="1" Securized="0" ReadOnly="1" ValueType="Boolean">
+                            <!--.{APPLICATIONS}.COOPESHOP.ADMIN.EDVSTATS.EDVSTAT.CHILDSQLSELECTCHANGED.Reset-->
+                            <VAR ShortName="Reset" ClassName="" AutoReset="1" Securized="1" ReadOnly="1" ValueType="Boolean">
                                 <Script><![CDATA[Enabled]]></Script>
                                 <Meta><![CDATA[<DESIGNER.LASTPRESENTATION>HTML</DESIGNER.LASTPRESENTATION>]]></Meta>
                             </VAR>
@@ -3162,7 +3644,7 @@ background-color: #E0E7F0;
                                 <DOM ShortName="SQLSelect">
                                     <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Catalogues.List.SQLSelect.IDCONTACT-->
                                     <VAR ShortName="IDCONTACT" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Integer">
-                                        <Value><![CDATA[131]]></Value>
+                                        <Value><![CDATA[42]]></Value>
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Catalogues.List.SQLSelect.IDCONTACT.DesignOnly-->
                                         <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
                                             <Value><![CDATA[False]]></Value>
@@ -3190,10 +3672,398 @@ background-color: #E0E7F0;
                                 <Meta><![CDATA[<HTMLEDITOR />]]></Meta>
                             </VAR>
                             <DOM ShortName="Lignes">
-                                <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List-->
-                                <VAR ShortName="List" ClassName="VarDataTable" AutoReset="0" Securized="0" ReadOnly="0" ValueType="DataTable">
+                                <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit-->
+                                <VAR ShortName="Edit" ClassName="VarDataTable" AutoReset="0" Securized="0" ReadOnly="0" ValueType="DataTable">
                                     <Value><![CDATA[<?xml version="1.0" encoding="utf-16"?><DataTable><Schema><xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"><xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="MySQL" msdata:UseCurrentLocale="true"><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element name="MySQL"><xs:complexType><xs:sequence><xs:element name="IdContact" type="xs:int" minOccurs="0" /><xs:element name="IdDossier" type="xs:int" minOccurs="0" /><xs:element name="TypeDossier" type="xs:string" minOccurs="0" /><xs:element name="Line" type="xs:int" minOccurs="0" /><xs:element name="IdArticle" type="xs:int" minOccurs="0" /><xs:element name="Category" type="xs:string" minOccurs="0" /><xs:element name="artCategory" type="xs:string" minOccurs="0" /><xs:element name="artName" type="xs:string" minOccurs="0" /><xs:element name="Quantity" type="xs:decimal" minOccurs="0" /><xs:element name="Unit" type="xs:string" minOccurs="0" /><xs:element name="Price" type="xs:decimal" minOccurs="0" /><xs:element name="Forfait" type="xs:decimal" minOccurs="0" /><xs:element name="Comment" type="xs:string" minOccurs="0" /><xs:element name="artImage" type="xs:string" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema></Schema><Data /></DataTable>]]></Value>
                                     <Meta><![CDATA[<HTMLEDITOR />]]></Meta>
+                                </VAR>
+                                <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List-->
+                                <VAR ShortName="List" ClassName="VarDataTable" AutoReset="0" Securized="0" ReadOnly="0" ValueType="DataTable">
+                                    <Value><![CDATA[<?xml version="1.0" encoding="utf-16"?><DataTable><Schema><xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"><xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="MySQL" msdata:UseCurrentLocale="true"><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element name="MySQL"><xs:complexType><xs:sequence><xs:element name="Line" type="xs:int" minOccurs="0" /><xs:element name="IdArticle" type="xs:int" minOccurs="0" /><xs:element name="Category" type="xs:string" minOccurs="0" /><xs:element name="artCategory" type="xs:string" minOccurs="0" /><xs:element name="artName" type="xs:string" minOccurs="0" /><xs:element name="Quantity" type="xs:decimal" minOccurs="0" /><xs:element name="Unit" type="xs:string" minOccurs="0" /><xs:element name="Price" type="xs:decimal" minOccurs="0" /><xs:element name="Forfait" type="xs:decimal" minOccurs="0" /><xs:element name="Comment" type="xs:string" minOccurs="0" /><xs:element name="IdContact" type="xs:int" minOccurs="0" /><xs:element name="IdDossier" type="xs:int" minOccurs="0" /><xs:element name="TypeDossier" type="xs:string" minOccurs="0" /><xs:element name="artImage" type="xs:string" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema></Schema><Data /></DataTable>]]></Value>
+                                    <Meta><![CDATA[<HTMLEDITOR />]]></Meta>
+                                </VAR>
+                                <DOM ShortName="Edit">
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit._Index-->
+                                    <VAR ShortName="_Index" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Integer">
+                                        <Value><![CDATA[0]]></Value>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Close-->
+                                    <VAR ShortName="Close" ClassName="" AutoReset="1" Securized="1" ReadOnly="0" ValueType="Boolean" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.edvDocument-->
+                                    <VAR ShortName="edvDocument" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                        <Value><![CDATA[<?=edv.HTML.edvStat(arguments, edvSender, edvClient)?>]]></Value>
+                                        <Meta><![CDATA[<HTMLEDITOR />]]></Meta>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.edvStat-->
+                                    <VAR ShortName="edvStat" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Object" SaveLocation="V" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.edvSubmit-->
+                                    <VAR ShortName="edvSubmit" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                        <Value><![CDATA[<?edvReturn(edvjs.json(arguments));
+?>]]></Value>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Error-->
+                                    <VAR ShortName="Error" ClassName="VarLog" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String" SaveLocation="V" Control="EDVCtrlLog" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Icon-->
+                                    <VAR ShortName="Icon" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                        <Value><![CDATA[imgEDVTypeDataTable]]></Value>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Insert-->
+                                    <VAR ShortName="Insert" ClassName="" AutoReset="1" Securized="1" ReadOnly="0" ValueType="Boolean" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.NewRow-->
+                                    <VAR ShortName="NewRow" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                        <Value><![CDATA[False]]></Value>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Open-->
+                                    <VAR ShortName="Open" ClassName="" AutoReset="1" Securized="0" ReadOnly="0" ValueType="Boolean" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.RowsCount-->
+                                    <VAR ShortName="RowsCount" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer">
+                                        <Value><![CDATA[0]]></Value>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.SQLInsert-->
+                                    <VAR ShortName="SQLInsert" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.SQLSelect-->
+                                    <VAR ShortName="SQLSelect" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                        <Value><![CDATA[SELECT lg.IdContact, lg.IdDossier, lg.TypeDossier, lg.Line, lg.IdArticle, a.Category, pcat.Label AS artCategory, a.Name AS artName, lg.Quantity, lg.Unit, lg.Price, lg.Forfait, lg.Comment, a.Image AS artImage
+FROM lgdossier lg
+LEFT JOIN article a
+	ON a.IdArticle = lg.IdArticle
+LEFT JOIN parameter pcat
+	ON pcat.Domain = 'ARTCAT'
+	AND pcat.IdParam = a.Category
+WHERE lg.TypeDossier = 'CMD'
+AND lg.IdDossier = :IDDOSSIER
+AND lg.IdContact = :IDCONTACT
+AND lg.Line = :LINE]]></Value>
+                                    </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Status-->
+                                    <VAR ShortName="Status" ClassName="" AutoReset="0" Securized="0" ReadOnly="1" ValueType="Integer" SaveLocation="V" />
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Text-->
+                                    <VAR ShortName="Text" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="String">
+                                        <Value><![CDATA[Edition]]></Value>
+                                    </VAR>
+                                    <DOM ShortName="edvSubmit">
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.edvSubmit._Where-->
+                                        <VAR ShortName="_Where" ClassName="VarFunction" AutoReset="0" Securized="1" ReadOnly="1" ValueType="Function">
+                                            <Script><![CDATA[when(..:Changing) me = null;]]></Script>
+                                        </VAR>
+                                    </DOM>
+                                    <DOM ShortName="Open">
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Open._Index-->
+                                        <VAR ShortName="_Index" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Integer">
+                                            <Value><![CDATA[0]]></Value>
+                                        </VAR>
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Open.Icon-->
+                                        <VAR ShortName="Icon" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                            <Value><![CDATA[imgEDVTypeBoolean]]></Value>
+                                        </VAR>
+                                        <DOM ShortName="Visible">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Open.Visible.DesignOnly-->
+                                            <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                <Value><![CDATA[False]]></Value>
+                                            </VAR>
+                                        </DOM>
+                                    </DOM>
+                                    <DOM ShortName="Row">
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.artImage-->
+                                        <VAR ShortName="artImage" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Comment-->
+                                        <VAR ShortName="Comment" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Quantity-->
+                                        <VAR ShortName="Quantity" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Double">
+                                            <Value><![CDATA[0]]></Value>
+                                        </VAR>
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Unit-->
+                                        <VAR ShortName="Unit" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
+                                        <DOM ShortName="_table">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row._table.cssBody-->
+                                            <VAR ShortName="cssBody" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                                <Value><![CDATA[text-align: left;
+background-color: white;]]></Value>
+                                            </VAR>
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row._table.Filter-->
+                                            <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row._table.Foot-->
+                                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                                <Value><![CDATA[<?if(this.Rows.Count > 0){
+?><input type="hidden" name="edvCode" value="<?=edvSender.Name?>.edvSubmit"/>
+<input type="hidden" name="edvSender" value="<?=edvSender.Name?>"/>
+<input type="hidden" name="edvArgs.Row.IdContact" value="<?=this.Value("IdContact")?>"/>
+<input type="hidden" name="edvArgs.Row.IdDossier" value="<?=this.Value("IdDossier")?>"/>
+<input type="hidden" name="edvArgs.Row.Line" value="<?=this.Value("IdDossier")?>|<?=this.Value("Line")?>"/>
+<a href="#<?=this.Value("Line")?>" class="edvicon edvimgSave" onclick="<?
+	?>var r = edvSubmit($(this).parents('table:first').find(':input[name]'));<?
+	?>if(r && isNaN(r)) alert(r);<?
+	?>else $(this).edvExpander('parent', 'refresh');<?
+?>">Enregistrer</a>
+<a class="edvicon edvimgTrash" onclick="<?
+	?>var r = edvSubmit($(this).parents('table:first').find(':input[name]'), "edvArgs.action=delete");<?
+	?>if(r && isNaN(r)) alert(r);<?
+	?>else $(this).edvExpander('parent', 'refresh');<?
+?>">Supprimer</a>
+<?}?>]]></Value>
+                                            </VAR>
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row._table.Head-->
+                                            <VAR ShortName="Head" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row._table.Rotate-->
+                                            <VAR ShortName="Rotate" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                <Value><![CDATA[True]]></Value>
+                                            </VAR>
+                                            <DOM ShortName="Foot">
+                                                <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row._table.Foot.css-->
+                                                <VAR ShortName="css" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                                    <Value><![CDATA[padding-top: 1em;
+padding-bottom: 8px;
+}
+> .edvicon {
+margin-right: 1em;
+font-size: smaller;
+}]]></Value>
+                                                </VAR>
+                                                <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row._table.Foot.Visible-->
+                                                <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                    <Value><![CDATA[True]]></Value>
+                                                </VAR>
+                                            </DOM>
+                                            <DOM ShortName="Head">
+                                                <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row._table.Head.Visible-->
+                                                <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                    <Value><![CDATA[False]]></Value>
+                                                </VAR>
+                                            </DOM>
+                                        </DOM>
+                                        <DOM ShortName="artCategory">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.artCategory.Filter-->
+                                            <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.artCategory.Foot-->
+                                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.artCategory.Head-->
+                                            <VAR ShortName="Head" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                                <Value><![CDATA[Catégorie]]></Value>
+                                            </VAR>
+                                        </DOM>
+                                        <DOM ShortName="artImage">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.artImage.Cell-->
+                                            <VAR ShortName="Cell" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.artImage.Filter-->
+                                            <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.artImage.Foot-->
+                                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.artImage.Head-->
+                                            <VAR ShortName="Head" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                                <Value><![CDATA[Image]]></Value>
+                                            </VAR>
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.artImage.Visible-->
+                                            <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                <Value><![CDATA[False]]></Value>
+                                            </VAR>
+                                            <DOM ShortName="Cell">
+                                                <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.artImage.Cell.Default-->
+                                                <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                    <Value><![CDATA[True]]></Value>
+                                                </VAR>
+                                            </DOM>
+                                        </DOM>
+                                        <DOM ShortName="artName">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.artName.Filter-->
+                                            <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.artName.Foot-->
+                                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.artName.Head-->
+                                            <VAR ShortName="Head" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                                <Value><![CDATA[Article]]></Value>
+                                            </VAR>
+                                        </DOM>
+                                        <DOM ShortName="Category">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Category.Filter-->
+                                            <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Category.Foot-->
+                                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Category.Visible-->
+                                            <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                <Value><![CDATA[False]]></Value>
+                                            </VAR>
+                                        </DOM>
+                                        <DOM ShortName="Comment">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Comment.Cell-->
+                                            <VAR ShortName="Cell" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                                <Value><![CDATA[<?=this.Input({
+name: "edvArgs.Row." + this.Column
+, tag: "textarea"
+, style: "width:90%"
+, rows: 1
+})?>]]></Value>
+                                            </VAR>
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Comment.Filter-->
+                                            <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Comment.Foot-->
+                                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Comment.Head-->
+                                            <VAR ShortName="Head" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                                <Value><![CDATA[Commentaire]]></Value>
+                                            </VAR>
+                                            <DOM ShortName="Cell">
+                                                <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Comment.Cell.Default-->
+                                                <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                    <Value><![CDATA[False]]></Value>
+                                                </VAR>
+                                            </DOM>
+                                        </DOM>
+                                        <DOM ShortName="Forfait">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Forfait.Filter-->
+                                            <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Forfait.Foot-->
+                                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Forfait.Visible-->
+                                            <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                <Value><![CDATA[False]]></Value>
+                                            </VAR>
+                                        </DOM>
+                                        <DOM ShortName="IdArticle">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.IdArticle.Filter-->
+                                            <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.IdArticle.Foot-->
+                                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.IdArticle.Visible-->
+                                            <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                <Value><![CDATA[False]]></Value>
+                                            </VAR>
+                                        </DOM>
+                                        <DOM ShortName="IdContact">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.IdContact.Filter-->
+                                            <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.IdContact.Foot-->
+                                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.IdContact.Visible-->
+                                            <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                <Value><![CDATA[False]]></Value>
+                                            </VAR>
+                                        </DOM>
+                                        <DOM ShortName="IdDossier">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.IdDossier.Filter-->
+                                            <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.IdDossier.Foot-->
+                                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.IdDossier.Visible-->
+                                            <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                <Value><![CDATA[False]]></Value>
+                                            </VAR>
+                                        </DOM>
+                                        <DOM ShortName="Line">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Line.Filter-->
+                                            <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Line.Foot-->
+                                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Line.Visible-->
+                                            <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                <Value><![CDATA[False]]></Value>
+                                            </VAR>
+                                        </DOM>
+                                        <DOM ShortName="Price">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Price.Filter-->
+                                            <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Price.Foot-->
+                                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Price.Visible-->
+                                            <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                <Value><![CDATA[False]]></Value>
+                                            </VAR>
+                                        </DOM>
+                                        <DOM ShortName="Quantity">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Quantity.Cell-->
+                                            <VAR ShortName="Cell" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                                <Value><![CDATA[<?=this.Input({
+name: "edvArgs.Row." + this.Column
+})?>
+&nbsp;<?=this.Input("Unit", {
+name: "edvArgs.Row.Unit"
+})?>]]></Value>
+                                            </VAR>
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Quantity.Filter-->
+                                            <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Quantity.Foot-->
+                                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Quantity.Head-->
+                                            <VAR ShortName="Head" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                                <Value><![CDATA[Quantité]]></Value>
+                                            </VAR>
+                                            <DOM ShortName="Cell">
+                                                <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Quantity.Cell.Default-->
+                                                <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                    <Value><![CDATA[False]]></Value>
+                                                </VAR>
+                                            </DOM>
+                                        </DOM>
+                                        <DOM ShortName="TypeDossier">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.TypeDossier.Filter-->
+                                            <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.TypeDossier.Foot-->
+                                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.TypeDossier.Visible-->
+                                            <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                <Value><![CDATA[False]]></Value>
+                                            </VAR>
+                                        </DOM>
+                                        <DOM ShortName="Unit">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Unit.Cell-->
+                                            <VAR ShortName="Cell" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Unit.Filter-->
+                                            <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Unit.Foot-->
+                                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Unit.Head-->
+                                            <VAR ShortName="Head" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                                <Value><![CDATA[Unité]]></Value>
+                                            </VAR>
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Unit.Visible-->
+                                            <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                <Value><![CDATA[False]]></Value>
+                                            </VAR>
+                                            <DOM ShortName="Cell">
+                                                <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Row.Unit.Cell.Default-->
+                                                <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                    <Value><![CDATA[True]]></Value>
+                                                </VAR>
+                                            </DOM>
+                                        </DOM>
+                                    </DOM>
+                                    <DOM ShortName="RowsCount">
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.RowsCount.Limit-->
+                                        <VAR ShortName="Limit" ClassName="" AutoReset="0" Securized="0" ReadOnly="0" ValueType="Integer">
+                                            <Value><![CDATA[30]]></Value>
+                                        </VAR>
+                                    </DOM>
+                                    <DOM ShortName="SQLSelect">
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.SQLSelect.IDCONTACT-->
+                                        <VAR ShortName="IDCONTACT" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                            <Value><![CDATA[42]]></Value>
+                                        </VAR>
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.SQLSelect.IdDossier-->
+                                        <VAR ShortName="IdDossier" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Integer">
+                                            <Value><![CDATA[131215011]]></Value>
+                                        </VAR>
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.SQLSelect.LINE-->
+                                        <VAR ShortName="LINE" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                            <Value><![CDATA[2]]></Value>
+                                        </VAR>
+                                        <DOM ShortName="IdDossier">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.SQLSelect.IdDossier.DesignOnly-->
+                                            <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                <Value><![CDATA[False]]></Value>
+                                            </VAR>
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.SQLSelect.IdDossier.Text-->
+                                            <VAR ShortName="Text" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                                <Value><![CDATA[Catalogue]]></Value>
+                                            </VAR>
+                                        </DOM>
+                                    </DOM>
+                                    <DOM ShortName="Visible">
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.Edit.Visible.DesignOnly-->
+                                        <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                            <Value><![CDATA[False]]></Value>
+                                        </VAR>
+                                    </DOM>
+                                </DOM>
+                                <DOM ShortName="List">
                                     <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Close-->
                                     <VAR ShortName="Close" ClassName="" AutoReset="1" Securized="1" ReadOnly="0" ValueType="Boolean" />
                                     <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.edvDocument-->
@@ -3223,7 +4093,7 @@ background-color: #E0E7F0;
                                     </VAR>
                                     <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.SQLSelect-->
                                     <VAR ShortName="SQLSelect" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
-                                        <Value><![CDATA[SELECT lg.IdContact, lg.IdDossier, lg.TypeDossier, lg.Line, lg.IdArticle, a.Category, pcat.Label AS artCategory, a.Name AS artName, lg.Quantity, lg.Unit, lg.Price, lg.Forfait, lg.Comment, a.Image AS artImage
+                                        <Value><![CDATA[SELECT lg.Line, lg.IdArticle, a.Category, pcat.Label AS artCategory, a.Name AS artName, lg.Quantity, lg.Unit, lg.Price, lg.Forfait, lg.Comment, lg.IdContact, lg.IdDossier, lg.TypeDossier, a.Image AS artImage
 FROM lgdossier lg
 LEFT JOIN article a
 	ON a.IdArticle = lg.IdArticle
@@ -3265,8 +4135,6 @@ ORDER BY lg.Line]]></Value>
                                         <VAR ShortName="artImage" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.artName-->
                                         <VAR ShortName="artName" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
-                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.artUnit-->
-                                        <VAR ShortName="artUnit" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.Category-->
                                         <VAR ShortName="Category" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.Comment-->
@@ -3333,19 +4201,51 @@ background-color: #E0E7F0;
                                                 <Value><![CDATA[True]]></Value>
                                             </VAR>
                                             <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row._table.Foot-->
-                                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                                <Value><![CDATA[<span class="edvExpander" name="edvCode=.{Html}.edvStat&edvSender=<?=edvSender.Domain?>Edit<?
+	?>&<?=edvSender.Domain?>Edit.NewRow=1<?
+	?>&edvArgs.SQLSelect={IdDossier:<?=this.Value("IdDossier")?>, IdContact:<?=this.Value("IdContact")?>}">
+<span class="edvicon edvimgAdd">ajouter une ligne
+</span>
+</span><script>
+edv.ready(function(){
+	$("#<?=this.tableId?>").find("> tbody > tr > td:first-child")
+	.find(".edvimgTrash, .edvimgAdd")
+		.click(function(){<?
+			?>var r = edvGetCode("<?=edvSender.Domain?>Edit.edvSubmit&edvSender=<?=edvSender.Domain?>Edit", this.getAttribute('name'));<?
+			?>if(r && isNaN(r)) alert(r);<?
+			?>else $("#<?=this.tableId?>").edvExpander('parent', 'parent', 'refresh');<?
+		?>});
+});
+</script>]]></Value>
+                                            </VAR>
                                             <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row._table.Head-->
-                                            <VAR ShortName="Head" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
+                                            <VAR ShortName="Head" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                                <Value><![CDATA[<?this.edvRoot = ..edvAppli:Domain;
+?>]]></Value>
+                                            </VAR>
                                             <DOM ShortName="Foot">
+                                                <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row._table.Foot.css-->
+                                                <VAR ShortName="css" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                                    <Value><![CDATA[font-size: 12px;]]></Value>
+                                                </VAR>
                                                 <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row._table.Foot.Visible-->
                                                 <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
-                                                    <Value><![CDATA[False]]></Value>
+                                                    <Value><![CDATA[True]]></Value>
                                                 </VAR>
                                             </DOM>
                                             <DOM ShortName="Head">
+                                                <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row._table.Head.css-->
+                                                <VAR ShortName="css" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                                    <Value><![CDATA[display: none;]]></Value>
+                                                </VAR>
+                                                <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row._table.Head.Default-->
+                                                <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                    <Value><![CDATA[False]]></Value>
+                                                </VAR>
                                                 <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row._table.Head.Visible-->
                                                 <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
-                                                    <Value><![CDATA[False]]></Value>
+                                                    <Value><![CDATA[True]]></Value>
                                                 </VAR>
                                             </DOM>
                                         </DOM>
@@ -3376,6 +4276,16 @@ background-color: #E0E7F0;
                                             </VAR>
                                         </DOM>
                                         <DOM ShortName="artName">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.artName.Cell-->
+                                            <VAR ShortName="Cell" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                                <Value><![CDATA[<?if(!this.IsNull()){
+	?><a class="edvicon edvimgArticle" onclick="edvDialog.Show('.{Html}.edvStat'<?
+		?>, 'edvSender=<?=this.edvRoot?>Article.Edit<?
+		?>&edvArgs.SQLSelect.IdArticle=<?=this.Value("IdArticle")?><?
+		?>', { title: $(this).text() });<?
+	?>"><?=edvTools.EscapeHtml(this.Value().ToString()) ?></span>
+<?}?>]]></Value>
+                                            </VAR>
                                             <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.artName.Filter-->
                                             <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
                                             <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.artName.Foot-->
@@ -3384,16 +4294,12 @@ background-color: #E0E7F0;
                                             <VAR ShortName="Head" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
                                                 <Value><![CDATA[Article]]></Value>
                                             </VAR>
-                                        </DOM>
-                                        <DOM ShortName="artUnit">
-                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.artUnit.Filter-->
-                                            <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
-                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.artUnit.Foot-->
-                                            <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
-                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.artUnit.Visible-->
-                                            <VAR ShortName="Visible" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
-                                                <Value><![CDATA[False]]></Value>
-                                            </VAR>
+                                            <DOM ShortName="Cell">
+                                                <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.artName.Cell.Default-->
+                                                <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                    <Value><![CDATA[False]]></Value>
+                                                </VAR>
+                                            </DOM>
                                         </DOM>
                                         <DOM ShortName="Category">
                                             <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.Category.Filter-->
@@ -3469,6 +4375,14 @@ font-family: Courier New;]]></Value>
                                             </DOM>
                                         </DOM>
                                         <DOM ShortName="Line">
+                                            <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.Line.Cell-->
+                                            <VAR ShortName="Cell" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                                <Value><![CDATA[<span class="pointer edvicon edvimgTrash" name="edvArgs.action=delete&edvArgs.Row={IdDossier:<?=this.Value("IdDossier")?>, IdContact:<?=this.Value("IdContact")?>, Line:<?=this.Value("Line")?>}">&nbsp;</span>
+<span class="pointer edvicon edvimgAdd" name="edvArgs.action=clone&edvArgs.Row={IdDossier:<?=this.Value("IdDossier")?>, IdContact:<?=this.Value("IdContact")?>, Line:<?=this.Value("Line")?>}">&nbsp;</span>
+<span class="edvExpander" name="edvCode=.{Html}.edvStat&edvSender=<?=edvSender.Domain?>Edit&edvArgs.SQLSelect={IdDossier:<?=this.Value("IdDossier")?>, IdContact:<?=this.Value("IdContact")?>, Line:<?=this.Value("Line")?>}">
+<span class="edvicon edvimgEdit">&nbsp;</span>
+</span>]]></Value>
+                                            </VAR>
                                             <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.Line.Filter-->
                                             <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
                                             <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.Line.Foot-->
@@ -3483,7 +4397,20 @@ font-family: Courier New;]]></Value>
                                                     <Value><![CDATA[text-align: right;
 padding-left: 4px;
 padding-right: 1em;
-font-family: Courier New;]]></Value>
+font-family: Courier New;
+}
+> .edvimgTrash {
+width: 16px;
+    padding-left: 6px;
+}
+> .edvimgAdd {
+width: 16px;
+    padding-left: 3px;
+}]]></Value>
+                                                </VAR>
+                                                <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.Line.Cell.Default-->
+                                                <VAR ShortName="Default" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                                    <Value><![CDATA[False]]></Value>
                                                 </VAR>
                                             </DOM>
                                         </DOM>
@@ -3540,8 +4467,7 @@ font-family: Courier New;]]></Value>
                                             <DOM ShortName="Cell">
                                                 <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.Row.Unit.Cell.css-->
                                                 <VAR ShortName="css" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
-                                                    <Value><![CDATA[
-font-family: Courier New;]]></Value>
+                                                    <Value><![CDATA[font-family: Courier New;]]></Value>
                                                 </VAR>
                                             </DOM>
                                         </DOM>
@@ -3563,7 +4489,7 @@ font-family: Courier New;]]></Value>
                                         </VAR>
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.SQLSelect.DateMax-->
                                         <VAR ShortName="DateMax" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="DateTime">
-                                            <Value><![CDATA[21/12/2013 00:00:00]]></Value>
+                                            <Value><![CDATA[22/12/2013 00:00:00]]></Value>
                                         </VAR>
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.SQLSelect.hasLg-->
                                         <VAR ShortName="hasLg" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
@@ -3575,7 +4501,7 @@ font-family: Courier New;]]></Value>
                                         </VAR>
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.SQLSelect.IdDossier-->
                                         <VAR ShortName="IdDossier" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Integer">
-                                            <Value><![CDATA[131118001]]></Value>
+                                            <Value><![CDATA[131117001]]></Value>
                                         </VAR>
                                         <DOM ShortName="_filterSets">
                                             <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.Lignes.List.SQLSelect._filterSets.list-->
@@ -3638,7 +4564,7 @@ null;]]></Script>
                                             <Value><![CDATA[False]]></Value>
                                         </VAR>
                                     </DOM>
-                                </VAR>
+                                </DOM>
                             </DOM>
                             <DOM ShortName="List">
                                 <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.List.Close-->
@@ -3670,7 +4596,8 @@ null;]]></Script>
                                 </VAR>
                                 <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.List.SQLSelect-->
                                 <VAR ShortName="SQLSelect" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
-                                    <Value><![CDATA[SELECT d.IdContact, d.IdDossier, d.TypeDossier, d.DateDossier, COUNT(lg.Line) AS nbLg, d.Status, d.IdClient, c.Name AS clientName, d.ClosedDate, d.Comment, ps.Label as statusLabel
+                                    <Value><![CDATA[<?var idCmd = :IdCmd;
+?>SELECT d.IdContact, d.IdDossier, d.TypeDossier, d.DateDossier, COUNT(lg.Line) AS nbLg, d.Status, d.IdClient, c.Name AS clientName, d.ClosedDate, d.Comment, ps.Label as statusLabel
 FROM dossier d
 INNER JOIN contact c
 	ON c.IdContact = d.IdClient
@@ -3684,6 +4611,9 @@ AND d.IdDossierRef = :IDDOSSIER
 AND d.IdContact = :IDCONTACT
 AND d.TypeDossierRef = 'CTLOG'
 AND d.DateDossier < :DATEMAX + interval 1 DAY
+<?if(idCmd){
+?>AND d.IdDossier = :IDCMD
+<?}?>
 GROUP BY d.IdContact, d.IdDossier, d.TypeDossier, d.DateDossier, d.IdClient, c.Name, d.ClosedDate, d.Status, d.Comment, ps.Label
 <?if(:hasLg){?>
 HAVING COUNT(lg.Line) > 0
@@ -3853,7 +4783,14 @@ font-family: Courier New;]]></Value>
                                     <DOM ShortName="DateDossier">
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.List.Row.DateDossier.Cell-->
                                         <VAR ShortName="Cell" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
-                                            <Value><![CDATA[<?=this.IsNull() ? "" : this.Value().ToString("d MMM yyyy HH:mm") ?>]]></Value>
+                                            <Value><![CDATA[<?var format;
+if(this.date == this.Value().Date)
+	format = "HH:mm";
+else {
+	format = "d MMM yyyy HH:mm";
+	this.date = this.Value().Date;
+}
+?><?=this.IsNull() ? "" : this.Value().ToString(format) ?>]]></Value>
                                         </VAR>
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.List.Row.DateDossier.Filter-->
                                         <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
@@ -3909,7 +4846,11 @@ font-size: smaller;]]></Value>
                                     </DOM>
                                     <DOM ShortName="IdDossier">
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.List.Row.IdDossier.Filter-->
-                                        <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
+                                        <VAR ShortName="Filter" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code">
+                                            <Value><![CDATA[<?=HTML.INPUT({
+"size" : "9"
+}, :SQLSelect.IdCmd:Object, edvClient)?>]]></Value>
+                                        </VAR>
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.List.Row.IdDossier.Foot-->
                                         <VAR ShortName="Foot" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Code" />
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.List.Row.IdDossier.Head-->
@@ -4048,19 +4989,21 @@ float: left;]]></Value>
                                     </VAR>
                                     <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.List.SQLSelect.DateMax-->
                                     <VAR ShortName="DateMax" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="DateTime">
-                                        <Value><![CDATA[21/12/2013 00:00:00]]></Value>
+                                        <Value><![CDATA[22/12/2013 00:00:00]]></Value>
                                     </VAR>
                                     <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.List.SQLSelect.hasLg-->
                                     <VAR ShortName="hasLg" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
                                         <Value><![CDATA[True]]></Value>
                                     </VAR>
+                                    <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.List.SQLSelect.IdCmd-->
+                                    <VAR ShortName="IdCmd" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String" />
                                     <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.List.SQLSelect.IDCONTACT-->
                                     <VAR ShortName="IDCONTACT" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
-                                        <Value><![CDATA[131]]></Value>
+                                        <Value><![CDATA[42]]></Value>
                                     </VAR>
                                     <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.List.SQLSelect.IdDossier-->
                                     <VAR ShortName="IdDossier" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Integer">
-                                        <Value><![CDATA[111127001]]></Value>
+                                        <Value><![CDATA[111101001]]></Value>
                                     </VAR>
                                     <DOM ShortName="DateMax">
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.List.SQLSelect.DateMax.DesignOnly-->
@@ -4091,6 +5034,16 @@ null;]]></Script>
                                         <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.List.SQLSelect.hasLg.Text-->
                                         <VAR ShortName="Text" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
                                             <Value><![CDATA[Ayant des lignes]]></Value>
+                                        </VAR>
+                                    </DOM>
+                                    <DOM ShortName="IdCmd">
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.List.SQLSelect.IdCmd.DesignOnly-->
+                                        <VAR ShortName="DesignOnly" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="Boolean">
+                                            <Value><![CDATA[True]]></Value>
+                                        </VAR>
+                                        <!--.{Applications}.CoopEShop.Admin.edvStats.Fournisseur.Commandes.List.SQLSelect.IdCmd.Text-->
+                                        <VAR ShortName="Text" ClassName="" AutoReset="0" Securized="1" ReadOnly="0" ValueType="String">
+                                            <Value><![CDATA[IdCmd]]></Value>
                                         </VAR>
                                     </DOM>
                                     <DOM ShortName="IdDossier">
